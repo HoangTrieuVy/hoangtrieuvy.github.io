@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - hoangtrieuvy
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - hoangtrieuvy/GGS-DMS
+  - hoangtrieuvy/Deep-Unfolding-Networks-for-Image-Denoising
+  - hoangtrieuvy/Deep-Unfolding-Networks-for-Piecewise-Homogeneous-Fractal-Images-Analysis-
+  - hoangtrieuvy/linearly-transformed-particle-method
