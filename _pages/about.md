@@ -17,4 +17,4 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am currently ....
+I am currently a PhD student at Laboratoire de Physique of the Ecole Normale Supérieure de Lyon (France). I am working on Multiscale estimation and interface detection for signals and images under the supervision of [Nelly Pustelnik](https://perso.ens-lyon.fr/nelly.pustelnik/) and [Marion Foare](https://perso.ens-lyon.fr/marion.foare/).
