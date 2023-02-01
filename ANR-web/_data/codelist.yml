@@ -1,0 +1,13 @@
+- title: "GGS-DMS"
+  image: 
+  description: Joint image restoration and contour detection using Discrete Mumford-Shah with Ambrosio-Tortorelli penalization
+  authors: HoangTrieuVy LE
+  paper:
+    url: https://ieeexplore.ieee.org/abstract/document/9723590
+  link:
+    url: https://github.com/hoangtrieuvy/GGS-DMS
+    display:  Git repo
+  highlight: 1
+  codetype: 1
+  news2:
+

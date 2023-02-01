@@ -1,0 +1,9 @@
+- title: "Proximal based strategies for solving discrete Mumford-Shah with Ambrosio-Tortorelli penalization on edges"
+  image: 
+  description: This work is dedicated to joint image restoration and contour detection considering the Ambrosio-Tortorelli functional. Two proximal alternating minimization schemes with convergence guarantees are provided, PALM-AT and SL-PAM-AT, as well as closed-form expressions of the involved proximity operators. A thorough numerical study is conducted in order to evaluate the performance of both numerical schemes as well as comparisons to state-of-the-art Mumford-Shah strategies.
+  authors: Hoang Trieu Vy Le, Marion Foare, Nelly Pustelnik
+  link:
+    url: https://ieeexplore.ieee.org/abstract/document/9723590
+    display:  IEEE, 2022.
+  highlight: 1
+  news2:

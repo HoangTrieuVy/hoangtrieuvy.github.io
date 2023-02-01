@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+
+  {% if page.title == "Meetings" %}
+    {% include header2.html %}
+  {% elsif page.title == "Webinar" %}
+    {% include header2.html %}
+  {% elsif page.title == "Domino" %}
+    {% include header2.html %}
+  {% elsif page.title == "OceaniX Sandbox" %}
+    {% include header2.html %}
+  {% elsif page.title == "OceaniX Videos" %}
+    {% include header2.html %}
+  {% else %}
+    {% include header.html %}
+  {% endif %}
+
+    <div class="container-fluid">
+      <div class="row">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

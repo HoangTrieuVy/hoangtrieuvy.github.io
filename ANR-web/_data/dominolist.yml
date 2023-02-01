@@ -1,0 +1,109 @@
+- title: "Prevalence of Neural Collapse during the terminal phase of deep learning training"
+  image: claire.jpg
+  description: 
+  date: 2020/12/05
+  authors: Claire Scavinner
+  link: 
+    url: https://arxiv.org/abs/2008.08186
+    display: arXiv:2008.08186
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+- title: "Continuous Conditional Generative AdversarialNetworks (cGAN) with Generator Regularization"
+  image: Carlos.png
+  description: 
+  date: 2020/28/04
+  authors: Carlos Granero Belichon
+  link: 
+    url: https://arxiv.org/abs/2103.14884
+    display: arXiv:2103.14884
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+
+- title: "Learning deep representations by mutual information estimation and maximization"
+  image: DeepInfoMax.jpg
+  description: 
+  date: 2020/24/03
+  authors: F. Rousseau
+  link: 
+    url: https://arxiv.org/abs/1808.06670
+    display: arXiv:1808.06670
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+- title: "Deep Equilibrium Models"
+  image: 
+  description: 
+  date: 2020/24/02
+  authors: G. Morel
+  link: 
+    url: https://arxiv.org/abs/1909.01377
+    display: arXiv:1909.01377
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+- title: "Dynamics of stochastic gradient descent for two-layer neural networks in the teacher-student setup"
+  image: 
+  description: 
+  date: 2020/10/02
+  authors: M. Zambra
+  link: 
+    url: https://arxiv.org/abs/1906.08632
+    display: arXiv:1906.08632 
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+
+
+- title: "Adversarial active learning"
+  image: adversarialactivelearning.jpg
+  description: 
+  date: 2020/27/01
+  authors: T. Mondal
+  link: 
+    url: https://arxiv.org/abs/1904.00370
+    display: arXiv:1904.00370
+  highlight: 1
+  codetype: 2
+  news1: 
+  news2: 
+
+
+
+- title: "DiffTaichi: DIFFERENTIABLE PROGRAMMING FOR PHYSICAL SIMULATION"
+  image: figDiffTaichi.jpg
+  description: 
+  date: 2020/11/25
+  authors: Q. Febvre
+  link: 
+    url: https://arxiv.org/abs/1910.00935
+    display: arXiv:1910.00935
+  highlight: 1
+  codetype: 1
+  news1: 
+  news2: 
+
+- title: "Logarithmic Pruning is All You Need"
+  image: figPruning.jpg
+  description: 
+  date: 2020/09/23
+  authors: A. Colin
+  link: 
+    url: https://arxiv.org/abs/2006.12156
+    display: 2006.12156
+  highlight: 1
+  codetype: 1
+  news1: 
+  news2: 
+
