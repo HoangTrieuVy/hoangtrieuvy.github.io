@@ -22,8 +22,14 @@
                 <p class="name" style="text-align: center;">
                   Hoang Trieu Vy LE
                 </p>
-                <p>I'm a research scientist at <a href="https://list.cea.fr/fr/">CEA List</a> in France, where I  mostly works on tomographic reconstruction.
+
+                
+
+                <p>I'm currently research scientist at <a href="https://list.cea.fr/fr/">CEA List</a> in France, where I  mostly works on 2D/3D tomographic image reconstruction and generative AI.
                 </p>
+
+                <p>I received the Ph.D degree in Signal & Image Processing from ENS Lyon in 2023 under the supervision of <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a> and <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a> </p>
+                
                 <p>
                   My current research mainly lies on developing general learning algorithms for different tasks in computer vision.
                 </p>
@@ -31,7 +37,8 @@
                   <a href="mailto:lehoangtrieuvy15@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/resume.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=JBA9s6YAAAAJ&hl=fr">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/HoangTrieuVy">Github</a>
+                  <a href="https://github.com/HoangTrieuVy">Github</a>&nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/hoangtrieuvyle/">Linkedin</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
@@ -50,7 +57,7 @@
               <td style="padding:-20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing.
+                  My research topics include unfolded Neural Networks, computer vision , deep learning, generative AI, and image processing.
                 </p>
               </td>
             </tr>
@@ -59,7 +66,56 @@
 
 
 
-   
+
+
+
+      <!--
+        <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
+      </tr>
+  --> 
+  <tr onmouseout="bzpnn_stop()" onmouseover="bzpnn_start()" >     
+    <td style="padding:24px;width:30%;vertical-align:middle">
+      <div class="one">
+        <div class="two" id='bzpnn_image'><video  width=150% height=150% muted autoplay loop>
+        <source src="images/PNNs.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></div>
+        <img src='images/bzpnn.png' width="180">
+      </div>
+      <script type="text/javascript">
+        function bzpnn_start() {
+          document.getElementById('bzpnn_image').style.opacity = "1";
+        }
+
+        function bzpnn_stop() {
+          document.getElementById('bzpnn_image').style.opacity = "0";
+        }
+        bzpnn_stop()
+      </script>
+    </td>
+    <td style="padding:8px;width:100%;vertical-align:middle">
+      <a href="">
+    <span class="papertitle">Embedding Blake-Zisserman Regularization in Unfolded Proximal Neural Networks for Enhanced Edge Detection
+  </span>
+      </a>
+      <br>
+      <strong>HoangTrieuVy LE</strong>,
+      <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>,
+      <a href="https://sites.google.com/view/audreyrepetti">Audrey Repetti</a>,
+      <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>
+      
+      <br>
+      
+      <a href="">code </a>/
+      <a href="https://hal.science/hal-04771534v1/file/SPL_2025_v1.pdf">HAL</a>
+      <p></p>
+      <p>
+        In this paper, we present a new edge detection model based on proximal unfolded neural networks. The architecture relies on unfolding proximal Blake-Zisserman iterations, leading to a composition of two blocks: a smoothing block and an edge detection block. </p>
+    </td>
+  </tr>
+
+
+    <tr onmouseout="pnns_stop()" onmouseover="pnns_start()" >     
       <td style="padding:24px;width:30%;vertical-align:middle">
         <div class="one">
           <div class="two" id='PNNs_image'><video  width=150% height=150% muted autoplay loop>
@@ -97,10 +153,205 @@
           We propose different learning strategies for our PNN framework, and investigate their robustness (Lipschitz property) and denoising efficiency. Finally, we assess the robustness of our PNNs when plugged in a forward-backward algorithm for an image deblurring problem
         </p>
       </td>
+    </tr>
 <!--
       <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
     </tr>
 --> 
+<tr onmouseout="dmsat_stop()" onmouseover="dmsat_start()" >     
+  <td style="padding:24px;width:30%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='dmsat_image'><video  width=150% height=150% muted autoplay loop>
+      <source src="images/dmsat.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></div>
+      <img src='images/dmsat.png' width="180">
+    </div>
+    <script type="text/javascript">
+      function dmsat_start() {
+        document.getElementById('dmsat_image').style.opacity = "1";
+      }
+
+      function dmsat_stop() {
+        document.getElementById('dmsat_image').style.opacity = "0";
+      }
+      dmsat_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:100%;vertical-align:middle">
+    <a href="">
+  <span class="papertitle">Proximal based strategies for solving Discrete Mumford-Shah with Ambrosio-Tortorelli penalization on edges
+</span>
+    </a>
+    <br>
+    <strong>HoangTrieuVy LE</strong>,
+    <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>,
+    <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>
+    <br>
+    
+    <a href="https://github.com/HoangTrieuVy/P-DMS-AT">code </a>/
+    <a href="https://hal.science/hal-03381093/file/SPL.pdf">HAL</a>
+    <p></p>
+    <p>
+      This work is dedicated to joint image restoration and contour detection considering the Ambrosio-Tortorelli functional. Two proximal alternating minimization schemes with convergence guarantees are provided, PALM-AT and SL-PAM-AT, as well as closed-form expressions of the involved proximity operators.
+</p>
+  </td>
+</tr>
+
+
+
+
+<!--
+      <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
+    </tr>
+--> 
+<tr onmouseout="fasterpnn_stop()" onmouseover="fasterpnn_start()" >     
+  <td style="padding:24px;width:30%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='fasterpnn_image'><video  width=150% height=150% muted autoplay loop>
+      <source src="images/fasterpnn.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></div>
+      <img src='images/fasterpnn.png' width="180">
+    </div>
+    <script type="text/javascript">
+      function fasterpnn_start() {
+        document.getElementById('fasterpnn_image').style.opacity = "1";
+      }
+
+      function fasterpnn_stop() {
+        document.getElementById('fasterpnn_image').style.opacity = "0";
+      }
+      fasterpnn_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:100%;vertical-align:middle">
+    <a href="">
+  <span class="papertitle">The faster proximal algorithm, the better unfolded deep learning architecture ? The study case of image denoising
+</span>
+    </a>
+    <br>
+    <strong>HoangTrieuVy LE</strong>,
+    <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>,
+    <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>
+    <br>
+    
+    <a href="https://github.com/HoangTrieuVy/P-DMS-AT">code </a>/
+    <a href="https://hal.science/hal-03621538v1/file/EUSIPCO_2022_final.pdf">HAL</a>
+    <p></p>
+    <p>
+      In this work, we proposed two deep unfolded networks for gaussian denoising that can be activated from standard or accelerated schemes to illustrate the benefit to unroll accelerated
+      schemes when possible.</p>
+  </td>
+</tr>
+
+
+
+<!--
+      <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
+    </tr>
+--> 
+<tr onmouseout="dhs_stop()" onmouseover="dhs_start()" >     
+  <td style="padding:24px;width:30%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='dhs_image'><video  width=150% height=150% muted autoplay loop>
+      <source src="images/dhs.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></div>
+      <img src='images/dhs.png' width="180">
+    </div>
+    <script type="text/javascript">
+      function PNNs_start() {
+        document.getElementById('dhs_image').style.opacity = "1";
+      }
+
+      function PNNs_stop() {
+        document.getElementById('dhs_image').style.opacity = "0";
+      }
+      PNNs_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:100%;vertical-align:middle">
+    <a href="">
+  <span class="papertitle">Fast Proximal Unrolled Algorithms for the Analysis of Piecewise Homogeneous Fractal Images
+</span>
+    </a>
+    <br>
+    <strong>HoangTrieuVy LE</strong>,
+    <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>,
+    <a href="https://bpascal-fr.github.io/">Barbara Pascal</a>,
+    <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>,
+    <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>,
+    <a href="https://scholar.google.com/citations?user=5Euf8v4AAAAJ&hl=fr">Patrice Abry</a>
+    <br>
+    
+    <a href="">code </a>/
+    <a href="https://hal.science/hal-03621545v1/document">HAL</a>
+    <p></p>
+    <p>
+      We propose two unrolled deep network architectures built from the proximal FISTA and Chambolle-Pock algorithms to estimate local regularity in piecewise homogeneous fractal images. </p>
+  </td>
+</tr>
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <tr>
@@ -122,7 +373,46 @@
               </td>
             </tr>
 
-           
+  
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 						
             <tr>
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
