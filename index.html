@@ -72,6 +72,15 @@
       <!--
         <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
       </tr>
+      <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/prof_pic.jpg">
+                  <img 
+                    style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(100%);" 
+                    alt="profile photo" 
+                    src="images/prof_pic.jpg" 
+                    class="hoverZoomLink">
+                </a>
+              </td>
   --> 
   <tr onmouseout="bzpnn_stop()" onmouseover="bzpnn_start()" >     
     <td style="padding:24px;width:30%;vertical-align:middle">
@@ -79,18 +88,24 @@
         <div class="two" id='bzpnn_image'><video  width=150% height=150% muted autoplay loop>
         <source src="images/PNNs.mp4" type="video/mp4">
         Your browser does not support the video tag.
-        </video></div>
-        <img src='images/bzpnn.png' width="180">
+      </video></div>
+      <div>
+        <a href="images/bzpnn.png">
+          <img 
+            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(100%);" 
+            src="images/bzpnn.png" 
+            class="hoverZoomLink">
+        </a>
       </div>
       <script type="text/javascript">
         function bzpnn_start() {
           document.getElementById('bzpnn_image').style.opacity = "1";
         }
-
+      
         function bzpnn_stop() {
           document.getElementById('bzpnn_image').style.opacity = "0";
         }
-        bzpnn_stop()
+        bzpnn_stop();
       </script>
     </td>
     <td style="padding:8px;width:100%;vertical-align:middle">
@@ -122,7 +137,12 @@
           <source src="images/PNNs.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
-          <img src='images/PNNs.png' width="180">
+          <a href="images/PNNs.png">
+            <img 
+              style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+              src="images/PNNs.png" 
+              class="hoverZoomLink">
+          </a>
         </div>
         <script type="text/javascript">
           function PNNs_start() {
@@ -165,7 +185,12 @@
       <source src="images/dmsat.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video></div>
-      <img src='images/dmsat.png' width="180">
+      <a href="images/dmsat.png">
+        <img 
+          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          src="images/dmsat.png" 
+          class="hoverZoomLink">
+      </a>
     </div>
     <script type="text/javascript">
       function dmsat_start() {
@@ -212,7 +237,12 @@
       <source src="images/fasterpnn.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video></div>
-      <img src='images/fasterpnn.png' width="180">
+      <a href="images/fasterpnn.png">
+        <img 
+          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          src="images/fasterpnn.png" 
+          class="hoverZoomLink">
+      </a>
     </div>
     <script type="text/javascript">
       function fasterpnn_start() {
@@ -258,7 +288,12 @@
       <source src="images/dhs.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video></div>
-      <img src='images/dhs.png' width="180">
+      <a href="images/dhs.png">
+        <img 
+          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          src="images/dhs.png" 
+          class="hoverZoomLink">
+      </a>
     </div>
     <script type="text/javascript">
       function PNNs_start() {
@@ -374,7 +409,12 @@
       <source src="images/phdthesis.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video></div>
-      <img src='images/phdthesis.png' width="180">
+      <a href="images/phdthesis.png">
+        <img 
+          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          src="images/phdthesis.png" 
+          class="hoverZoomLink">
+      </a>
     </div>
     <script type="text/javascript">
       function phdthesis_start() {
