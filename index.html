@@ -167,13 +167,42 @@
         <br>
         
         <a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">code </a>/
-        [<a href="https://arxiv.org/pdf/2308.03139">PDF</a>]
+        [<a href="https://arxiv.org/pdf/2308.03139">PDF</a>]/
+        <a href="#" onclick="toggleBibtex(event)" style="margin-left: 8px; text-decoration: none; cursor: pointer;">BibTeX</a>
+
+
+    <div id="bibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+<pre>@ARTICLE{10630640,
+  author={Le, Hoang Trieu Vy and Repetti, Audrey and Pustelnik, Nelly},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Unfolded Proximal Neural Networks for Robust Image Gaussian Denoising}, 
+  year={2024},
+  volume={33},
+  number={},
+  pages={4475-4487},
+  doi={10.1109/TIP.2024.3437219}}
+</pre>
+    </div>
+
         <p></p>
         <p>
           We propose different learning strategies for our PNN framework, and investigate their robustness (Lipschitz property) and denoising efficiency. Finally, we assess the robustness of our PNNs when plugged in a forward-backward algorithm for an image deblurring problem
         </p>
       </td>
     </tr>
+
+    <script>
+      function toggleBibtex(event) {
+        event.preventDefault(); // Prevent any default behavior like scrolling
+          const bibtexDiv = document.getElementById('bibtex');
+          if (bibtexDiv.style.display === 'none') {
+              bibtexDiv.style.display = 'block';
+          } else {
+              bibtexDiv.style.display = 'none';
+          }
+      }
+      </script>
+      
 <!--
       <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
     </tr>
@@ -215,7 +244,23 @@
     <br>
     
     <a href="https://github.com/HoangTrieuVy/P-DMS-AT">code </a>/
-    [<a href="https://hal.science/hal-03381093/file/SPL.pdf">PDF</a>]
+    [<a href="https://hal.science/hal-03381093/file/SPL.pdf">PDF</a>]/
+    <a href="#" onclick="dmsattoggleBibtex(event)" style="margin-left: 8px; text-decoration: none; cursor: pointer;">BibTeX</a>
+
+
+    <div id="dmsatbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+<pre>@ARTICLE{9723590,
+  author={Le, Hoang Trieu Vy and Foare, Marion and Pustelnik, Nelly},
+  journal={IEEE Signal Processing Letters}, 
+  title={Proximal Based Strategies for Solving Discrete Mumford-Shah 
+        With Ambrosio-Tortorelli Penalization on Edges}, 
+  year={2022},
+  volume={29},
+  number={},
+  pages={952-956},
+  doi={10.1109/LSP.2022.3155307}}
+</pre>
+    </div>
     <p></p>
     <p>
       This work is dedicated to joint image restoration and contour detection considering the Ambrosio-Tortorelli functional. Two proximal alternating minimization schemes with convergence guarantees are provided, PALM-AT and SL-PAM-AT, as well as closed-form expressions of the involved proximity operators.
@@ -223,7 +268,17 @@
   </td>
 </tr>
 
-
+<script>
+  function dmsattoggleBibtex(event) {
+    event.preventDefault(); // Prevent any default behavior like scrolling
+      const bibtexDiv = document.getElementById('dmsatbibtex');
+      if (bibtexDiv.style.display === 'none') {
+          bibtexDiv.style.display = 'block';
+      } else {
+          bibtexDiv.style.display = 'none';
+      }
+  }
+  </script>
 
 
 <!--
@@ -267,14 +322,38 @@
     <br>
     
     <a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">code </a>/
-    [<a href="https://hal.science/hal-03621538v1/file/EUSIPCO_2022_final.pdf">PDF</a>]
+    [<a href="https://hal.science/hal-03621538v1/file/EUSIPCO_2022_final.pdf">PDF</a>]/
+    <a href="#" onclick="fasterpnnbibtextoggleBibtex(event)" style="margin-left: 8px; text-decoration: none; cursor: pointer;">BibTeX</a>
+
+
+    <div id="fasterpnnbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+<pre>@INPROCEEDINGS{9909592,
+  author={Le, Hoang Trieu Vy and Pustelnik, Nelly and Foare, Marion},
+  booktitle={2022 30th European Signal Processing Conference (EUSIPCO)}, 
+  title={The faster proximal algorithm, the better unfolded deep learning architecture ? 
+    The study case of image denoising}, 
+  year={2022},
+  pages={947-951},
+  doi={10.23919/EUSIPCO55093.2022.9909592}}
+</pre>
+    </div>
     <p></p>
     <p>
       In this work, we proposed two deep unfolded networks for gaussian denoising that can be activated from standard or accelerated schemes to illustrate the benefit to unroll accelerated
       schemes when possible.</p>
   </td>
 </tr>
-
+<script>
+  function fasterpnnbibtextoggleBibtex() {
+    event.preventDefault(event); // Prevent any default behavior like scrolling
+      const bibtexDiv = document.getElementById('fasterpnnbibtex');
+      if (bibtexDiv.style.display === 'none') {
+          bibtexDiv.style.display = 'block';
+      } else {
+          bibtexDiv.style.display = 'none';
+      }
+  }
+  </script>
 
 
 <!--
@@ -321,7 +400,19 @@
     <br>
     
     <!--<a href="">code </a>/-->
-    [<a href="https://hal.science/hal-03621545v1/document">PDF</a>]
+    [<a href="https://hal.science/hal-03621545v1/document">PDF</a>]/
+    <a href="#" onclick="dhsbibtextoggleBibtex(event)" style="margin-left: 1px; text-decoration: none; cursor: pointer;">BibTeX</a>
+
+
+    <div id="dhsbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+<pre>@inproceedings{HoangTVL2022AlgorithmesPR,
+  title={Fast Proximal Unrolled Algorithms for the Analysis of Piecewise Homogeneous Fractal Images},
+  author={ Hoang T.V Le, Barbara Pascal, Nelly Pustelnik, Marion Foare and Patrice Abry},
+  year={2022},
+  url={https://api.semanticscholar.org/CorpusID:253115164}
+}
+</pre>
+    </div>
     <p></p>
     <p>
       We propose two unrolled deep network architectures built from the proximal FISTA and Chambolle-Pock algorithms to estimate local regularity in piecewise homogeneous fractal images. </p>
@@ -330,6 +421,17 @@
 
 
 
+<script>
+  function dhsbibtextoggleBibtex(event) {
+    event.preventDefault(); // Prevent any default behavior like scrolling
+      const bibtexDiv = document.getElementById('dhsbibtex');
+      if (bibtexDiv.style.display === 'none') {
+          bibtexDiv.style.display = 'block';
+      } else {
+          bibtexDiv.style.display = 'none';
+      }
+  }
+  </script>
 
 
 
