@@ -82,7 +82,51 @@
                 </a>
               </td>
   --> 
-  <tr onmouseout="bzpnn_stop()" onmouseover="bzpnn_start()" >     
+  <tr onmouseout="udms_stop()" onmouseover="udms_start()" >
+    <td style="padding:24px;width:30%;vertical-align:middle">
+      <div class="one">
+        <div class="two" id='udms_image'><video  width=150% height=150% muted autoplay loop>
+        <source src="images/udms.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video></div>
+      <div>
+        <a href="images/udms.png">
+          <img
+            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(100%);"
+            src="images/udms.png"
+            class="hoverZoomLink">
+        </a>
+      </div>
+      <script type="text/javascript">
+        function udms_start() {
+          document.getElementById('udms_image').style.opacity = "1";
+        }
+
+        function udms_stop() {
+          document.getElementById('udms_image').style.opacity = "0";
+        }
+        udms_stop();
+      </script>
+    </td>
+    <td style="padding:8px;width:100%;vertical-align:middle">
+      <a href="https://ieeexplore.ieee.org/abstract/document/11226472/">
+        <span class="papertitle">Unfolded discrete Mumford-Shah functional for joint image denoising and edge detection</span>
+      </a>
+      <br>
+      <strong>HoangTrieuVy LE</strong>,
+      <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>,
+      <a href="https://sites.google.com/view/audreyrepetti">Audrey Repetti</a>,
+      <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a>
+      <br>
+      <em>EUSIPCO 2025</em>
+      <br>
+      [<a href="https://hal.science/hal-05404060v1/file/2025_unfolding_Mumford_Shah_HAL.pdf">PDF</a>]
+      <p></p>
+      <p>We propose an unfolded neural network approach for simultaneous image denoising and contour detection, bridging variational procedures designed to perform the combined denoising/edge detection task and black-box neural networks designed for edge detection.</p>
+    </td>
+  </tr>
+
+  <tr onmouseout="bzpnn_stop()" onmouseover="bzpnn_start()" >
     <td style="padding:24px;width:30%;vertical-align:middle">
       <div class="one">
         <div class="two" id='bzpnn_image'><video  width=150% height=150% muted autoplay loop>
