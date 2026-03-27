@@ -16,13 +16,15 @@ tr,
 p,
 a {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.6;
 }
 
 strong {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 h2 {
@@ -30,7 +32,7 @@ h2 {
   padding-top: 36px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 21px;
   letter-spacing: 0.04em;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 6px;
@@ -38,7 +40,7 @@ h2 {
 
 .papertitle {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -46,7 +48,8 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 28px;
+  font-size: 29px;
+  font-weight: bold;
   letter-spacing: 0.04em;
 }
 
