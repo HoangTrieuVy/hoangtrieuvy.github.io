@@ -54,8 +54,53 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
-              <td style="padding:-20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
+              <td style="padding:0px 0px 0px 0px;width:100%;vertical-align:middle">
+                <h2>Ph.D Thesis</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<tr onmouseout="phdthesis_stop()" onmouseover="phdthesis_start()" >
+  <td style="padding:24px;width:30%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='phdthesis_image'><video  width=150% height=150% muted autoplay loop>
+      <source src="images/phdthesis.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></div>
+      <a href="images/phdthesis.png">
+        <img
+          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
+          src="images/phdthesis.png"
+          class="hoverZoomLink">
+      </a>
+    </div>
+    <script type="text/javascript">
+      function phdthesis_start() {
+        document.getElementById('phdthesis_image').style.opacity = "1";
+      }
+      function phdthesis_stop() {
+        document.getElementById('phdthesis_image').style.opacity = "0";
+      }
+      phdthesis_stop()
+    </script>
+  </td>
+  <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
+    <a href="">
+  <span class="papertitle">Variations on the Mumford-Shah functional for interface detection in degraded images: from proximal algorithms to unrolled architectures
+</span>
+    </a>
+    <br>
+    <a href="https://theses.hal.science/tel-04520420v1/document">[PDF]</a>
+    <p></p>
+    <p>
+      I did my PhD thesis under the supervision of Nelly Pustelnik and Marion Foare at Laboratoire de Physique in École Normale Supérieure de Lyon, France. I worked on the interface between proximal optimisation and Deep Learning approaches to tackle joint image reconstruction and edge detection or segmentation tasks.</p>
+  </td>
+</tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:0px 0px 0px 0px;width:100%;vertical-align:middle">
+                <h2>Publications</h2>
                 <p>
                   My research topics include unfolded Neural Networks, computer vision , deep learning, generative AI, and image processing.
                 </p>
@@ -90,10 +135,10 @@
         Your browser does not support the video tag.
       </video></div>
       <div>
-        <a href="images/udms.png">
+        <a href="images/unfolded_dms.png">
           <img
-            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(100%);"
-            src="images/udms.png"
+            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
+            src="images/unfolded_dms.png"
             class="hoverZoomLink">
         </a>
       </div>
@@ -108,7 +153,7 @@
         udms_stop();
       </script>
     </td>
-    <td style="padding:8px;width:100%;vertical-align:middle">
+    <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
       <a href="https://ieeexplore.ieee.org/abstract/document/11226472/">
         <span class="papertitle">Unfolded discrete Mumford-Shah functional for joint image denoising and edge detection</span>
       </a>
@@ -136,7 +181,7 @@
       <div>
         <a href="images/bzpnn.png">
           <img 
-            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(100%);" 
+            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
             src="images/bzpnn.png" 
             class="hoverZoomLink">
         </a>
@@ -152,7 +197,7 @@
         bzpnn_stop();
       </script>
     </td>
-    <td style="padding:8px;width:100%;vertical-align:middle">
+    <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
       <a href="">
     <span class="papertitle">Embedding Blake-Zisserman Regularization in Unfolded Proximal Neural Networks for Enhanced Edge Detection
   </span>
@@ -199,7 +244,7 @@
           PNNs_stop()
         </script>
       </td>
-      <td style="padding:8px;width:100%;vertical-align:middle">
+      <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
         <a href="">
 			<span class="papertitle">Unfolded proximal neural networks for robust image Gaussian denoising
 </span>
@@ -276,7 +321,7 @@
       dmsat_stop()
     </script>
   </td>
-  <td style="padding:8px;width:100%;vertical-align:middle">
+  <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
     <a href="">
   <span class="papertitle">Proximal based strategies for solving Discrete Mumford-Shah with Ambrosio-Tortorelli penalization on edges
 </span>
@@ -354,7 +399,7 @@
       fasterpnn_stop()
     </script>
   </td>
-  <td style="padding:8px;width:100%;vertical-align:middle">
+  <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
     <a href="">
   <span class="papertitle">The faster proximal algorithm, the better unfolded deep learning architecture ? The study case of image denoising
 </span>
@@ -429,7 +474,7 @@
       PNNs_stop()
     </script>
   </td>
-  <td style="padding:8px;width:100%;vertical-align:middle">
+  <td style="padding:16px 16px 24px 16px;width:100%;vertical-align:middle">
     <a href="">
   <span class="papertitle">Fast Proximal Unrolled Algorithms for the Analysis of Piecewise Homogeneous Fractal Images
 </span>
@@ -534,58 +579,6 @@
 
 
 
-<tr>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:-20px;width:100%;vertical-align:middle">
-      <h2>Ph.D Thesis</h2>
-    </td>
-  </tr>
-</tbody></table>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-  <!--
-      <tr onmouseout="PNNs_stop()" onmouseover="PNNs_start()" bgcolor="#ffffd0">
-    </tr>
---> 
-<tr onmouseout="phdthesis_stop()" onmouseover="phdthesis_start()" >     
-  <td style="padding:24px;width:30%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='phdthesis_image'><video  width=150% height=150% muted autoplay loop>
-      <source src="images/phdthesis.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video></div>
-      <a href="images/phdthesis.png">
-        <img 
-          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
-          src="images/phdthesis.png" 
-          class="hoverZoomLink">
-      </a>
-    </div>
-    <script type="text/javascript">
-      function phdthesis_start() {
-        document.getElementById('phdthesis_image').style.opacity = "1";
-      }
-
-      function phdthesis_stop() {
-        document.getElementById('phdthesis_image').style.opacity = "0";
-      }
-      phdthesis_stop()
-    </script>
-  </td>
-  <td style="padding:8px;width:100%;vertical-align:middle">
-    <a href="">
-  <span class="papertitle">Variations on the Mumford-Shah functional for interface detection in degraded images: from proximal algorithms to unrolled architectures
-</span>
-    </a>
-    <br>
-    <a href="https://theses.hal.science/tel-04520420v1/document">[PDF]</a>
-    <p></p>
-    <p>
-      I did my PhD thesis under the supervision of Nelly Pustelnik and Marion Foare at Laboratoire de Physique in École Normale Supérieure de Lyon, France. I worked on the interface between proximal optimisation and Deep Learning approaches to tackle joint image reconstruction and edge detection or segmentation tasks.</td>
-</tr>
-
-</tr>
 
 
 
@@ -595,7 +588,7 @@
             <tr>
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                 <tr>
-                <td style="padding:-20px;width:100%;vertical-align:middle">
+                <td style="padding:0px 0px 0px 0px;width:100%;vertical-align:middle">
                   <h2>Talks</h2>
                 </td>
               </tr>
@@ -655,7 +648,7 @@
             <tr>
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                 <tr>
-                <td style="padding:-20px;width:100%;vertical-align:middle">
+                <td style="padding:0px 0px 0px 0px;width:100%;vertical-align:middle">
                   <h2>Teaching</h2>
                 </td>
               </tr>
