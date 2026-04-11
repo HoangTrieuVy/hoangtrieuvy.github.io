@@ -11,14 +11,14 @@
 }
 
 html.dark {
-  --bg: #171717;
+  --bg: #302C2C;
   --text: #e5e5e5;
   --text-muted: #a3a3a3;
-  --border: #333333;
+  --border: #4a4444;
   --link: #60a5fa;
   --link-hover: #f09228;
   --highlight: #2a2a00;
-  --code-bg: #262626;
+  --code-bg: #3d3838;
 }
 
 /* ── Base ── */
