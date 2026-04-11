@@ -1,11 +1,42 @@
+/* ── Theme variables ── */
+:root {
+  --bg: #ffffff;
+  --text: #171717;
+  --text-muted: #525252;
+  --border: #e5e5e5;
+  --link: #1772d0;
+  --link-hover: #f09228;
+  --highlight: #fefce8;
+  --code-bg: #f5f5f5;
+}
+
+html.dark {
+  --bg: #171717;
+  --text: #e5e5e5;
+  --text-muted: #a3a3a3;
+  --border: #333333;
+  --link: #60a5fa;
+  --link-hover: #f09228;
+  --highlight: #2a2a00;
+  --code-bg: #262626;
+}
+
+/* ── Base ── */
+html,
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
 a {
-  color: #1772d0;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: var(--link-hover);
   text-decoration: none;
 }
 
@@ -13,16 +44,16 @@ body,
 td,
 th,
 tr,
-p,
-a {
-  font-family: 'Courier New', Courier, monospace;
+p {
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
+  color: var(--text);
 }
 
 strong {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 15px;
   font-weight: 600;
 }
@@ -30,42 +61,98 @@ strong {
 h2 {
   margin: 0 0 8px 0;
   padding-top: 36px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 21px;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid #e0e0e0;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
+  color: var(--text);
 }
 
 .papertitle {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 29px;
-  font-weight: bold;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
+/* ── Theme toggle ── */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 100;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  background: var(--border);
+}
+
+.theme-toggle img {
+  display: block;
+  transition: filter 0.2s ease;
+}
+
+html.dark .theme-toggle img {
+  filter: invert(1);
+}
+
+/* ── Publication images ── */
 .one {
-  width: 160px;
-  height: 160px;
+  width: 100%;
   position: relative;
 }
 
+.one a {
+  display: block;
+}
+
+.one img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .two {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
+}
+
+.two video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .fade {
@@ -75,7 +162,7 @@ h2 {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background-color: var(--highlight);
 }
 
 /* Paper row spacing */

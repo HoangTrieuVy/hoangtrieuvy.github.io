@@ -8,31 +8,46 @@
     <meta name="author" content="Hoang Trieu Vy LE">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <img src="dark-theme.svg" width="20" height="20" alt="Toggle dark mode">
+    </button>
+    <script>
+      var btn = document.getElementById('theme-toggle');
+      btn.addEventListener('click', function() {
+        var isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+    <table style="width:100%;max-width:1100px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <td style="padding:2.5%;width:75%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
                   Hoang Trieu Vy LE
                 </p>
 
-                
+                <p>I am a Senior Research Scientist at <a href="https://www.beink.fr/">Beink Dream</a>, where I lead AI initiatives from fundamental research to production deployment—designing and scaling AI systems for 2D and 3D applications. Previously, I worked at <a href="https://www.cea.fr/">CEA</a> (France) and earned my Ph.D. from <a href="https://www.ens-lyon.fr/">École Normale Supérieure</a> under the supervision of <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Prof. Nelly Pustelnik</a>.</p>
 
-                <p>I'm currently a Principal AI Research And Development Engineer at <a href="https://www.beink.fr/">BeinkDream</a>, where I mainly work on computer visions tasks and generative AI.</p>
+                <p>My work focuses on bridging physics and AI, with a particular emphasis on efficient model design. I am especially driven by the challenge of learning compact, physically grounded representations from continuous high-dimensional signals, with strong connections to modern physics research.</p>
 
-
-                <p>I received the Ph.D degree in Signal & Image Processing from <a href="https://www.ens-lyon.fr/">ENS Lyon</a> in 2023 under the  warm and insightful supervision of <a href="http://perso.ens-lyon.fr/nelly.pustelnik/">Nelly Pustelnik</a> and <a href="http://perso.ens-lyon.fr/marion.foare/teaching.html">Marion Foare</a>. </p>
-                
-                <p>
-                  My research bridges mathematical optimization and deep learning — designing structured neural architectures that incorporate mathematical priors to solve inverse problems and learn reliable representations of the world.
-                </p>
                 <p style="text-align:center">
                   <a href="mailto:lehoangtrieuvy15@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/resume.pdf">CV</a> &nbsp;/&nbsp;
@@ -41,12 +56,12 @@
                   <a href="https://www.linkedin.com/in/hoangtrieuvyle/">Linkedin</a>
                 </p>
               </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
+              <td style="padding:2.5%;width:25%;max-width:25%">
                 <a href="images/prof_pic.jpg">
-                  <img 
-                    style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(100%);" 
-                    alt="profile photo" 
-                    src="images/prof_pic.jpg" 
+                  <img
+                    style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(100%);"
+                    alt="profile photo"
+                    src="images/prof_pic.jpg"
                     class="hoverZoomLink">
                 </a>
               </td>
@@ -61,7 +76,7 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <tr onmouseout="phdthesis_stop()" onmouseover="phdthesis_start()" >
-  <td style="padding:24px;width:30%;vertical-align:middle">
+  <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='phdthesis_image'><video  width=150% height=150% muted autoplay loop>
       <source src="images/phdthesis.mp4" type="video/mp4">
@@ -69,7 +84,7 @@
       </video></div>
       <a href="images/phdthesis.png">
         <img
-          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
+          style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);"
           src="images/phdthesis.png"
           class="hoverZoomLink">
       </a>
@@ -116,9 +131,7 @@
               <tr>
               <td style="padding:0px 0px 0px 0px;width:100%;vertical-align:middle">
                 <h2>Publications</h2>
-                <p>
-                  My research topics include unfolded Neural Networks, computer vision , deep learning, generative AI, and image processing.
-                </p>
+                <p>My research spans unfolded neural networks, image processing, computer vision, and generative AI.</p>
               </td>
             </tr>
           </tbody></table>
@@ -143,7 +156,7 @@
               </td>
   --> 
   <tr onmouseout="udms_stop()" onmouseover="udms_start()" >
-    <td style="padding:24px;width:30%;vertical-align:middle">
+    <td style="padding:16px;width:20%;vertical-align:middle">
       <div class="one">
         <div class="two" id='udms_image'><video  width=150% height=150% muted autoplay loop>
         <source src="images/udms.mp4" type="video/mp4">
@@ -152,7 +165,7 @@
       <div>
         <a href="images/unfolded_dms.png">
           <img
-            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
+            style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);"
             src="images/unfolded_dms.png"
             class="hoverZoomLink">
         </a>
@@ -187,7 +200,7 @@
   </tr>
 
   <tr onmouseout="bzpnn_stop()" onmouseover="bzpnn_start()" >
-    <td style="padding:24px;width:30%;vertical-align:middle">
+    <td style="padding:16px;width:20%;vertical-align:middle">
       <div class="one">
         <div class="two" id='bzpnn_image'><video  width=150% height=150% muted autoplay loop>
         <source src="images/PNNs.mp4" type="video/mp4">
@@ -196,7 +209,7 @@
       <div>
         <a href="images/bzpnn.png">
           <img 
-            style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);"
+            style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);"
             src="images/bzpnn.png" 
             class="hoverZoomLink">
         </a>
@@ -235,7 +248,7 @@
 
 
     <tr onmouseout="pnns_stop()" onmouseover="pnns_start()" >     
-      <td style="padding:24px;width:30%;vertical-align:middle">
+      <td style="padding:16px;width:20%;vertical-align:middle">
         <div class="one">
           <div class="two" id='PNNs_image'><video  width=150% height=150% muted autoplay loop>
           <source src="images/PNNs.mp4" type="video/mp4">
@@ -243,7 +256,7 @@
           </video></div>
           <a href="images/PNNs.png">
             <img 
-              style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+              style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);" 
               src="images/PNNs.png" 
               class="hoverZoomLink">
           </a>
@@ -312,7 +325,7 @@
     </tr>
 --> 
 <tr onmouseout="dmsat_stop()" onmouseover="dmsat_start()" >     
-  <td style="padding:24px;width:30%;vertical-align:middle">
+  <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='dmsat_image'><video  width=150% height=150% muted autoplay loop>
       <source src="images/dmsat.mp4" type="video/mp4">
@@ -320,7 +333,7 @@
       </video></div>
       <a href="images/dmsat.png">
         <img 
-          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);" 
           src="images/dmsat.png" 
           class="hoverZoomLink">
       </a>
@@ -390,7 +403,7 @@
     </tr>
 --> 
 <tr onmouseout="fasterpnn_stop()" onmouseover="fasterpnn_start()" >     
-  <td style="padding:24px;width:30%;vertical-align:middle">
+  <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='fasterpnn_image'><video  width=150% height=150% muted autoplay loop>
       <source src="images/fasterpnn.mp4" type="video/mp4">
@@ -398,7 +411,7 @@
       </video></div>
       <a href="images/fasterpnn.png">
         <img 
-          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);" 
           src="images/fasterpnn.png" 
           class="hoverZoomLink">
       </a>
@@ -465,7 +478,7 @@
     </tr>
 --> 
 <tr onmouseout="dhs_stop()" onmouseover="dhs_start()" >     
-  <td style="padding:24px;width:30%;vertical-align:middle">
+  <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='dhs_image'><video  width=150% height=150% muted autoplay loop>
       <source src="images/dhs.mp4" type="video/mp4">
@@ -473,7 +486,7 @@
       </video></div>
       <a href="images/dhs.png">
         <img 
-          style="width:200%;max-width:120%;object-fit: cover; filter: grayscale(0%);" 
+          style="width:100%;max-width:100%;object-fit: cover; filter: grayscale(0%);" 
           src="images/dhs.png" 
           class="hoverZoomLink">
       </a>
