@@ -129,8 +129,9 @@ h2 {
 }
 
 html.dark .tl-logo {
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 4px;
 }
 
 .tl-body {
@@ -144,6 +145,29 @@ html.dark .tl-logo {
   margin: 0 0 4px 0;
   font-size: 14px;
   color: var(--text-muted);
+}
+
+/* ── Upcoming Projects ── */
+.projects {
+  margin: 10px 0 0 0;
+}
+
+.project-entry {
+  margin-top: 14px;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.project-entry p {
+  margin: 3px 0 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* ── Theme toggle ── */
