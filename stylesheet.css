@@ -45,25 +45,25 @@ td,
 th,
 tr,
 p {
-  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.6;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
   color: var(--text);
 }
 
 strong {
-  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 h2 {
   margin: 0 0 8px 0;
   padding-top: 36px;
-  font-weight: 600;
-  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 21px;
+  font-weight: 700;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 23px;
   letter-spacing: -0.01em;
   border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
@@ -71,17 +71,17 @@ h2 {
 }
 
 .papertitle {
-  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--text);
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 29px;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 33px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -97,7 +97,7 @@ h2 {
 }
 
 .tl-year {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-muted);
   margin: 0 0 6px 0;
@@ -136,14 +136,14 @@ html.dark .tl-logo {
 
 .tl-body {
   flex: 1;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
   color: var(--text);
 }
 
 .tl-body p {
   margin: 0 0 4px 0;
-  font-size: 14px;
+  font-size: 17px;
   color: var(--text-muted);
 }
 
