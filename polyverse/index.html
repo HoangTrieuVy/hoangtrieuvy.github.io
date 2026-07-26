@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Polyverse — a low-poly 3D strategy game</title>
+    <meta name="author" content="Hoang Trieu Vy LE">
+    <meta name="description" content="Polyverse is a low-poly 3D real-time strategy game where time has shattered into crystal shards — each shard is one frozen age of civilization.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Polyverse — a low-poly 3D strategy game">
+    <meta property="og:description" content="Time has shattered into crystal shards. Each shard is one frozen age of civilization.">
+    <meta property="og:image" content="https://hoangtrieuvy.github.io/polyverse/images/shard-terrain.png">
+    <meta property="og:type" content="website">
+
+    <style>
+      :root {
+        --bg:        #0c1116;
+        --bg-raised: #131a21;
+        --border:    #24303a;
+        --text:      #e8eef3;
+        --muted:     #93a4b3;
+        --accent:    #6fd3a0;
+        --sky:       #4a90d9;
+
+        --dawn:  #d9b382;
+        --bronze:#c98a4b;
+        --iron:  #8fa3b5;
+        --gear:  #e07a3f;
+        --void:  #9b7fe0;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: #fff; }
+
+      .wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ── Back link ── */
+      .backlink {
+        display: inline-block;
+        margin: 28px 0 0 0;
+        font-size: 14px;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+      }
+      .backlink:hover { color: var(--text); }
+
+      /* ── Hero ── */
+      .hero { padding: 40px 0 8px 0; }
+
+      .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 9vw, 76px);
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        background: linear-gradient(100deg, #fff 10%, var(--accent) 55%, var(--sky) 95%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .tagline {
+        margin: 22px 0 0 0;
+        font-size: clamp(18px, 2.6vw, 22px);
+        line-height: 1.5;
+        color: var(--text);
+        max-width: 30em;
+      }
+
+      .subtagline {
+        margin: 14px 0 0 0;
+        color: var(--muted);
+        max-width: 34em;
+      }
+
+      /* ── Shot ── */
+      figure { margin: 44px 0 0 0; }
+
+      .shot {
+        width: 100%;
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+      }
+
+      figcaption {
+        margin-top: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      /* ── Sections ── */
+      section { padding-top: 60px; }
+
+      h2 {
+        margin: 0 0 6px 0;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .lede {
+        margin: 0 0 26px 0;
+        font-size: 20px;
+        line-height: 1.55;
+        letter-spacing: -0.01em;
+      }
+
+      p { color: var(--muted); }
+      p strong { color: var(--text); font-weight: 600; }
+
+      /* ── Timestones ── */
+      .stones { display: grid; gap: 12px; }
+
+      .stone {
+        display: grid;
+        grid-template-columns: 4px 1fr;
+        gap: 18px;
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .stone .bar { background: var(--stone-color, var(--muted)); }
+      .stone .body { padding: 16px 20px 18px 2px; }
+
+      .stone h3 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--stone-color, var(--text));
+      }
+
+      .stone .era {
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .stone .units {
+        margin: 8px 0 0 0;
+        font-size: 15px;
+        color: var(--muted);
+      }
+
+      /* ── Factions ── */
+      .factions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 12px;
+      }
+
+      .faction {
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 20px 20px 20px;
+      }
+
+      .faction h3 {
+        margin: 0 0 4px 0;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .faction p { margin: 0; font-size: 15px; }
+
+      /* ── Tech ── */
+      .tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; padding: 0; list-style: none; }
+
+      .tech li {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: 14px;
+        color: var(--muted);
+        background: var(--bg-raised);
+      }
+
+      /* ── Footer ── */
+      footer {
+        margin-top: 76px;
+        padding: 26px 0 60px 0;
+        border-top: 1px solid var(--border);
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      footer p { margin: 0 0 6px 0; font-size: 14px; }
+
+      @media (max-width: 560px) {
+        .stone { grid-template-columns: 4px 1fr; gap: 14px; }
+        section { padding-top: 46px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <a class="backlink" href="../">&larr;&nbsp; Hoang Trieu Vy LE</a>
+
+      <div class="hero">
+        <span class="badge">In development</span>
+        <h1>POLYVERSE</h1>
+        <p class="tagline">Time has shattered into crystal shards. Each shard is one frozen age of civilization.</p>
+        <p class="subtagline">A low-poly 3D real-time strategy game. Build from a handful of settlers, raise an army, and outlast rival builders for control of the shard.</p>
+      </div>
+
+      <figure>
+        <img class="shot" src="images/shard-terrain.png" alt="Low-poly terrain from Polyverse: a river cutting through green highlands, with the Ironstone build menu along the bottom of the screen">
+        <figcaption>An Ironstone shard in engine — procedural low-poly terrain with flat shading. Work in progress.</figcaption>
+      </figure>
+
+      <section>
+        <h2>The idea</h2>
+        <p class="lede">One age. No advancement. Win with what you were given.</p>
+        <p>Before each match you pick a <strong>Timestone</strong> — one of five frozen historical eras. There is no teching up mid-game: you build, fight and win using only your chosen era's technology. A Stone Age player and a Future player can meet on the same shard, and each has to make their own age work.</p>
+      </section>
+
+      <section>
+        <h2>Timestones</h2>
+        <div class="stones">
+          <div class="stone" style="--stone-color: var(--dawn)">
+            <div class="bar"></div>
+            <div class="body">
+              <h3>Dawnstone</h3>
+              <div class="era">Stone Age</div>
+              <p class="units">Gatherer · Brawler · Slinger</p>
+            </div>
+          </div>
+          <div class="stone" style="--stone-color: var(--bronze)">
+            <div class="bar"></div>
+            <div class="body">
+              <h3>Bronzestone</h3>
+              <div class="era">Bronze Age</div>
+              <p class="units">Villager · Spearman · Archer</p>
+            </div>
+          </div>
+          <div class="stone" style="--stone-color: var(--iron)">
+            <div class="bar"></div>
+            <div class="body">
+              <h3>Ironstone</h3>
+              <div class="era">Medieval</div>
+              <p class="units">Peasant · Knight · Crossbowman</p>
+            </div>
+          </div>
+          <div class="stone" style="--stone-color: var(--gear)">
+            <div class="bar"></div>
+            <div class="body">
+              <h3>Gearstone</h3>
+              <div class="era">Industrial / Modern</div>
+              <p class="units">Engineer · Rifleman · Tank</p>
+            </div>
+          </div>
+          <div class="stone" style="--stone-color: var(--void)">
+            <div class="bar"></div>
+            <div class="body">
+              <h3>Voidstone</h3>
+              <div class="era">Future / Digital</div>
+              <p class="units">Technician · Drone Scout · Swarm Drones</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Factions</h2>
+        <div class="factions">
+          <div class="faction">
+            <h3>Tidecallers</h3>
+            <p>Ocean and coastal. At home on water and shoreline.</p>
+          </div>
+          <div class="faction">
+            <h3>Ironwardens</h3>
+            <p>Mountain and mining. Built around extraction and hard ground.</p>
+          </div>
+          <div class="faction">
+            <h3>Plainstriders</h3>
+            <p>Plains and cavalry. Speed and open-field pressure.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Built with</h2>
+        <ul class="tech">
+          <li>Godot 4.7 · Forward+</li>
+          <li>GDScript</li>
+          <li>Blender procedural generation</li>
+          <li>Low-poly flat shading</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Polyverse is a personal project by <a href="../">Hoang Trieu Vy LE</a>, in active development. The source is not public.</p>
+        <p>For questions or a closer look, <a href="mailto:lehoangtrieuvy15@gmail.com">get in touch</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
