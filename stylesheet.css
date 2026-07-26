@@ -147,25 +147,6 @@ html.dark .tl-logo {
   color: var(--text-muted);
 }
 
-/* ── Research interest tags ── */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 12px 0 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tags li {
-  padding: 3px 11px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--code-bg);
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
 /* ── Upcoming Projects ── */
 .projects {
   margin: 10px 0 0 0;
