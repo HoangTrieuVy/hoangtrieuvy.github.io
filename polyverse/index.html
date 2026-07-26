@@ -15,19 +15,19 @@
 
     <style>
       :root {
-        --bg:        #0c1116;
-        --bg-raised: #131a21;
-        --border:    #24303a;
-        --text:      #e8eef3;
-        --muted:     #93a4b3;
-        --accent:    #6fd3a0;
-        --sky:       #4a90d9;
+        --bg:        #ffffff;
+        --bg-raised: #fafafa;
+        --border:    #e4e4e4;
+        --text:      #171717;
+        --muted:     #5f5f5f;
+        --rule:      #cfcfcf;
 
-        --dawn:  #d9b382;
-        --bronze:#c98a4b;
-        --iron:  #8fa3b5;
-        --gear:  #e07a3f;
-        --void:  #9b7fe0;
+        /* greyscale ramp — earliest era lightest, latest darkest */
+        --dawn:   #d4d4d4;
+        --bronze: #b0b0b0;
+        --iron:   #8a8a8a;
+        --gear:   #5c5c5c;
+        --void:   #2b2b2b;
       }
 
       * { box-sizing: border-box; }
@@ -43,8 +43,13 @@
         -webkit-font-smoothing: antialiased;
       }
 
-      a { color: var(--accent); text-decoration: none; }
-      a:hover { color: #fff; }
+      a {
+        color: var(--text);
+        text-decoration: underline;
+        text-decoration-color: var(--rule);
+        text-underline-offset: 3px;
+      }
+      a:hover { text-decoration-color: var(--text); }
 
       .wrap {
         max-width: 860px;
@@ -60,7 +65,7 @@
         color: var(--muted);
         letter-spacing: 0.02em;
       }
-      .backlink:hover { color: var(--text); }
+      .backlink:hover { color: var(--text); text-decoration-color: var(--text); }
 
       /* ── Hero ── */
       .hero { padding: 40px 0 8px 0; }
@@ -83,10 +88,7 @@
         line-height: 1;
         font-weight: 800;
         letter-spacing: -0.035em;
-        background: linear-gradient(100deg, #fff 10%, var(--accent) 55%, var(--sky) 95%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        color: var(--text);
       }
 
       .tagline {
@@ -128,7 +130,7 @@
         font-weight: 700;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--accent);
+        color: var(--muted);
       }
 
       .lede {
@@ -162,7 +164,7 @@
         font-size: 17px;
         font-weight: 700;
         letter-spacing: -0.01em;
-        color: var(--stone-color, var(--text));
+        color: var(--text);
       }
 
       .stone .era {
