@@ -147,6 +147,13 @@ html.dark .tl-logo {
   color: var(--text-muted);
 }
 
+/* ── Contact links under the photo ── */
+.contact-links {
+  margin: 12px 0 0 0;
+  text-align: center;
+  line-height: 1.9;
+}
+
 /* ── Upcoming Projects ── */
 .projects {
   margin: 10px 0 0 0;
