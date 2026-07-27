@@ -150,8 +150,81 @@ html.dark .tl-logo {
 /* ── Contact links under the photo ── */
 .contact-links {
   margin: 12px 0 0 0;
-  text-align: center;
   line-height: 1.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Icons inherit the theme link colour via currentColor, so they follow
+   light/dark automatically without a second set of assets. */
+.contact-links .icon-link {
+  display: inline-flex;
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.contact-links .icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+
+/* "CV" is the one text item in an icon row — size it to sit level with the
+   20px glyphs rather than at body size. */
+.contact-links .cv-link {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.contact-links .cv-link:hover {
+  color: var(--link-hover);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-links .cv-link {
+    transition: none;
+  }
+  .contact-links .cv-link:hover {
+    transform: none;
+  }
+}
+
+/* The Scholar mark is a cap sitting on a disc; at 20px the two shapes merge
+   into a blob. Stroking in the page background colour reinstates the gap. */
+.contact-links .icon-link svg.scholar path {
+  stroke: var(--bg);
+  stroke-width: 1.1;
+}
+
+.contact-links .icon-link:hover {
+  color: var(--link-hover);
+  transform: translateY(-1px);
+}
+
+.contact-links .icon-link:focus-visible {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-links .icon-link {
+    transition: none;
+  }
+  .contact-links .icon-link:hover {
+    transform: none;
+  }
 }
 
 /* ── Upcoming Projects ── */
