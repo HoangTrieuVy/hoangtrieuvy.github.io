@@ -227,6 +227,41 @@ html.dark .tl-logo {
   }
 }
 
+/* ── Research interests ── */
+/* The emoji is the bullet, so the native marker is dropped and the icon is
+   given a fixed column to keep the text edges aligned across rows. */
+.interests {
+  list-style: none;
+  margin: 12px 0 4px 0;
+  padding: 0;
+}
+
+.interests li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.interests li:last-child {
+  margin-bottom: 0;
+}
+
+.interests strong {
+  font-size: inherit;
+  color: var(--text);
+}
+
+.interest-icon {
+  flex: 0 0 1.4em;
+  font-size: 16px;
+  /* Emoji render from the system colour font, which ignores the theme text
+     colour — no dark-mode handling needed here. */
+}
+
 /* ── Upcoming Projects ── */
 .projects {
   margin: 10px 0 0 0;
