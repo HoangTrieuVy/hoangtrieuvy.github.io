@@ -46,7 +46,7 @@ th,
 tr,
 p {
   font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.65;
   color: var(--text);
@@ -54,7 +54,7 @@ p {
 
 strong {
   font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -63,7 +63,7 @@ h2 {
   padding-top: 36px;
   font-weight: 700;
   font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
-  font-size: 23px;
+  font-size: 21px;
   letter-spacing: -0.01em;
   border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
@@ -72,7 +72,7 @@ h2 {
 
 .papertitle {
   font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
 }
@@ -81,7 +81,7 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
-  font-size: 33px;
+  font-size: 29px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -97,7 +97,7 @@ h2 {
 }
 
 .tl-year {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-muted);
   margin: 0 0 6px 0;
@@ -136,14 +136,14 @@ html.dark .tl-logo {
 
 .tl-body {
   flex: 1;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--text);
 }
 
 .tl-body p {
   margin: 0 0 4px 0;
-  font-size: 17px;
+  font-size: 15px;
   color: var(--text-muted);
 }
 
@@ -177,7 +177,7 @@ html.dark .tl-logo {
 /* "CV" is the one text item in an icon row — size it to sit level with the
    20px glyphs rather than at body size. */
 .contact-links .cv-link {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -238,7 +238,7 @@ html.dark .tl-logo {
 
 .project-name {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text);
   letter-spacing: -0.01em;
 }
@@ -246,7 +246,7 @@ html.dark .tl-logo {
 .project-entry p {
   margin: 3px 0 0 0;
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
