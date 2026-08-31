@@ -332,3 +332,42 @@ span.highlight {
 tr + tr td {
   padding-top: 20px;
 }
+
+/* ── Research interests ── */
+.interests {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.interests > li {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.interests > li:first-child {
+  margin-top: 0;
+}
+
+.interests ul {
+  margin: 3px 0 0 0;
+  padding-left: 16px;
+  list-style: none;
+}
+
+.interests ul li {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.interests ul li::before {
+  content: "\2013";
+  margin-right: 7px;
+  color: var(--border);
+}
