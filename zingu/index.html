@@ -147,43 +147,6 @@
       p { color: var(--muted); }
       p strong { color: var(--text); font-weight: 600; }
 
-      /* ── Build path ── */
-      .stages { display: grid; gap: 12px; }
-
-      .stage {
-        display: grid;
-        grid-template-columns: 4px 1fr;
-        gap: 18px;
-        background: var(--bg-raised);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .stage .bar { background: var(--stage-color, var(--muted)); }
-      .stage .body { padding: 16px 20px 18px 2px; }
-
-      .stage h3 {
-        margin: 0;
-        font-size: 17px;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-        color: var(--text);
-      }
-
-      .stage .num {
-        font-size: 13px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .stage .out {
-        margin: 8px 0 0 0;
-        font-size: 15px;
-        color: var(--muted);
-      }
-
       /* ── Diagram ── */
       .diagram {
         margin: 0 0 22px 0;
@@ -197,41 +160,6 @@
         line-height: 1.7;
         color: var(--muted);
         white-space: pre;
-      }
-
-      /* ── Feature cards ── */
-      .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 12px;
-      }
-
-      .feature {
-        background: var(--bg-raised);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        padding: 18px 20px 20px 20px;
-      }
-
-      .feature h3 {
-        margin: 0 0 4px 0;
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-      }
-
-      .feature p { margin: 0; font-size: 15px; }
-
-      /* ── Tech ── */
-      .tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; padding: 0; list-style: none; }
-
-      .tech li {
-        padding: 5px 12px;
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        font-size: 14px;
-        color: var(--muted);
-        background: var(--bg-raised);
       }
 
       /* ── Links ── */
@@ -256,11 +184,30 @@
       }
 
       .version {
+        display: flex;
+        flex-direction: column;
         background: var(--bg-raised);
         border: 1px solid var(--border);
         border-radius: 10px;
-        padding: 16px 20px 20px 20px;
+        padding: 16px 20px 18px 20px;
+        color: inherit;
+        text-decoration: none;
       }
+
+      a.version:hover {
+        border-color: var(--text);
+        background: var(--bg);
+      }
+      a.version:hover .vmore { color: var(--text); }
+
+      .vmore {
+        margin-top: auto;
+        padding-top: 14px;
+        font-size: 13px;
+        letter-spacing: 0.02em;
+        color: var(--s6);
+      }
+      .vmore.muted { color: var(--rule); }
 
       .vhead {
         display: flex;
@@ -369,7 +316,6 @@
       footer p { margin: 0 0 6px 0; font-size: 14px; }
 
       @media (max-width: 560px) {
-        .stage { grid-template-columns: 4px 1fr; gap: 14px; }
         section { padding-top: 46px; }
         .diagram { font-size: 11px; }
         .next { grid-template-columns: 1fr; gap: 22px; }
@@ -388,7 +334,7 @@
         <p class="subtagline">Built end to end, in the open — from the first CAD sketch to a policy running on real hardware.</p>
       </div>
 
-      <figure>
+      <figure id="v010">
         <video class="shot" src="video/zingu-0.1.0.mp4" poster="images/zingu-poster.jpg"
                controls autoplay muted loop playsinline preload="metadata"></video>
         <figcaption>Zingu v0.1.0 balancing and driving on hardware — ESP32, cascaded PID, no external support.</figcaption>
@@ -398,7 +344,7 @@
         <h2>The idea</h2>
         <p class="lede">A robot should ship as a simulatable, identified asset — not as a pile of parts and a binary.</p>
         <p>Zingu is an inverted-pendulum robot built around an <strong>ESP32</strong>. It holds itself upright with a cascaded PID controller, and when it falls over — because it always eventually does — it detects the fall, waits for the chassis to settle, and performs a <strong>wheel-torque kick-up</strong> to swing itself back into the balance envelope.</p>
-        <p>I want this to be a project a beginner can actually start from, and finish. Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <strong>build path</strong>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
+        <p>I want this to be a project a beginner can actually start from, and finish. Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <a href="https://github.com/HoangTrieuVy/Zingu#the-build-path"><strong>build path</strong></a>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
         <p>The project then grows <strong>one robot version at a time</strong>. Each version is a full trip around those eight stages — its own key feature, and its own sim-to-real story for the parts worth learning in simulation first. Today that is a self-balancing robot. Next it gets legs, then a camera and the perception to use it.</p>
         <p>I chose balance and self-recovery to start on purpose. It is about the smallest robot that still forces you through the entire real-to-sim-to-real loop: an unstable system where a hand-tuned controller runs out of road and a learned policy has something to prove — and a build you can finish on a desk. Everything after this is the same loop with more degrees of freedom.</p>
         <p>The longer arc is an outdoor companion — the robot-dog idea on two wheels, smarter, and open to whatever task I can imagine giving it. <strong>Zingu Brain</strong>, the perception and decision side, comes next.</p>
@@ -408,25 +354,28 @@
         <h2>Versions</h2>
         <p class="lede">Each version is one robot, one new capability, and one full pass down the build path.</p>
         <div class="versions">
-          <div class="version">
+          <a class="version" href="#v010">
             <div class="vhead"><span class="vnum">v0.1.0</span><span class="vstate done">Running</span></div>
             <h3>Balance &amp; self-recovery</h3>
             <p>Rigid chassis, two wheels, cascaded PID. Falls over and kicks itself back up.</p>
-          </div>
-          <div class="version">
+            <span class="vmore">Watch it run &rarr;</span>
+          </a>
+          <a class="version" href="#v016">
             <div class="vhead"><span class="vnum">v0.1.6</span><span class="vstate wip">In CAD</span></div>
             <h3>Legs</h3>
             <p>Articulated linkages between chassis and wheels. More degrees of freedom than a PID wants to handle.</p>
-          </div>
+            <span class="vmore">See the design &rarr;</span>
+          </a>
           <div class="version">
             <div class="vhead"><span class="vnum">Next</span><span class="vstate planned">Planned</span></div>
             <h3>Perception &mdash; Zingu Brain</h3>
             <p>A camera, and the decision side that uses it. Where the robot stops reacting and starts choosing.</p>
+            <span class="vmore muted">Details soon</span>
           </div>
         </div>
       </section>
 
-      <section>
+      <section id="v016">
         <h2>Coming &mdash; v0.1.6</h2>
         <p class="lede">Legs, not just wheels.</p>
         <div class="next">
@@ -454,126 +403,6 @@
                                        │
                                      FAULT ── (stall / overcurrent / IMU loss)</div>
         <p>Angle estimation from the IMU feeds an inner torque loop and an outer position loop. The state machine is what makes the robot recoverable rather than fragile: a fall is a transition, not a crash.</p>
-      </section>
-
-      <section>
-        <h2>The build path</h2>
-        <p class="lede">Eight stages, each producing an artefact the next one depends on. You run the whole path once per robot version.</p>
-        <div class="stages">
-          <div class="stage" style="--stage-color: var(--s1)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Design</h3>
-              <div class="num">Stage 01</div>
-              <p class="out">A parametric CAD assembly, a BOM, and parts that are actually printable.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s2)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Asset</h3>
-              <div class="num">Stage 02</div>
-              <p class="out">CAD exported to MJCF / URDF / USD with real mass properties.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s3)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Sim</h3>
-              <div class="num">Stage 03</div>
-              <p class="out">A nominal MuJoCo model that balances under a hand-written controller.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s4)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Fabricate</h3>
-              <div class="num">Stage 04</div>
-              <p class="out">Printed, assembled, wired hardware.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s5)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Firmware</h3>
-              <div class="num">Stage 05</div>
-              <p class="out">ESP32 firmware that balances, recovers, and streams telemetry.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s6)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Identify</h3>
-              <div class="num">Stage 06</div>
-              <p class="out">Measured actuator model, inertial parameters, latency — and a posterior over them.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s7)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Train</h3>
-              <div class="num">Stage 07</div>
-              <p class="out">A policy trained in the identified sim, randomised over that posterior.</p>
-            </div>
-          </div>
-          <div class="stage" style="--stage-color: var(--s8)">
-            <div class="bar"></div>
-            <div class="body">
-              <h3>Deploy</h3>
-              <div class="num">Stage 08</div>
-              <p class="out">That policy running on the real robot, with the sim-to-real gap measured.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>It is a loop, not a line</h2>
-        <div class="diagram">      ┌──────────────────────────────────────────────────┐
-      │                                                  │
-  01 Design ──&gt; 02 Asset ──&gt; 03 Sim ──&gt; 07 Train ──&gt; 08 Deploy
-                                ▲                        │
-                                │                        │
-                                └──── 06 Identify &lt;───────┘
-                                            ▲
-                                            │
-                        04 Fabricate ──&gt; 05 Firmware</div>
-        <p>A sim built from CAD alone is a <strong>guess</strong>: geometry right, dynamics wrong. Stage 6 replaces the guesses with measurements, and stage 7 trains against a distribution of plausible robots rather than one idealised one. Every trip around the loop should shrink the gap measured in stage 8.</p>
-        <p>The numbering is a reading order, not a one-way street. You need no hardware at all to get through stage 3 — and if you only want the robot running and don't care about simulation, stages 1 → 4 → 5 are a complete conventional build.</p>
-      </section>
-
-      <section>
-        <h2>Key features</h2>
-        <div class="features">
-          <div class="feature">
-            <h3>Self-recovery</h3>
-            <p>Detects the fall, waits for the chassis to settle, and kicks itself back upright with wheel torque.</p>
-          </div>
-          <div class="feature">
-            <h3>Open and reproducible</h3>
-            <p>MIT-licensed, printable parts, off-the-shelf electronics. Every stage documented as a chapter with its own failure modes.</p>
-          </div>
-          <div class="feature">
-            <h3>Identified, not assumed</h3>
-            <p>Actuator model, inertias and latency are measured on a bench rig, then fed back into the simulator.</p>
-          </div>
-          <div class="feature">
-            <h3>Sim-to-real by construction</h3>
-            <p>The asset pipeline targets MuJoCo today and keeps the door open to Newton and Isaac Lab.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Built with</h2>
-        <ul class="tech">
-          <li>ESP32</li>
-          <li>C++ firmware</li>
-          <li>Cascaded PID</li>
-          <li>MuJoCo · MJX</li>
-          <li>Python (telemetry &amp; sysid)</li>
-          <li>Parametric CAD · FDM printing</li>
-        </ul>
       </section>
 
       <section>
