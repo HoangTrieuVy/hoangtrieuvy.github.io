@@ -289,15 +289,22 @@
         <h2>The idea</h2>
         <p class="lede">A robot should ship as a simulatable, identified asset — not as a pile of parts and a binary.</p>
         <p>Zingu is an inverted-pendulum robot built around an <strong>ESP32</strong>. It holds itself upright with a cascaded PID controller, and when it falls over — because it always eventually does — it detects the fall, waits for the chassis to settle, and performs a <strong>wheel-torque kick-up</strong> to swing itself back into the balance envelope.</p>
-        <p>I want this to be a project a beginner can actually start from, and finish. Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <a href="https://github.com/HoangTrieuVy/Zingu#the-build-path"><strong>build path</strong></a>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
-        <p>The project then grows <strong>one robot version at a time</strong>. Each version is a full trip around those eight stages — its own key feature, and its own sim-to-real story for the parts worth learning in simulation first. Today that is a self-balancing robot. Next it gets legs, then a camera and the perception to use it.</p>
+        <p>I want this to be a project a beginner can actually start from, and finish. Most robot repositories hand you the firmware and leave the other 90% as an exercise. Every version of Zingu is open source all the way down:</p>
+        <ul class="changes">
+          <li><strong>Sketches and CAD.</strong> The original design files, not just an exported mesh.</li>
+          <li><strong>Printable parts.</strong> STLs and print settings for the whole chassis.</li>
+          <li><strong>Electronics.</strong> A full parts list, wiring and pinout.</li>
+          <li><strong>Firmware.</strong> The ESP32 code that balances, recovers and streams telemetry.</li>
+          <li><strong>Simulation and RL.</strong> The robot model and the training code behind any learned policy.</li>
+        </ul>
+        <p>The project grows <strong>one robot version at a time</strong>. Each version is a complete robot with its own key feature — and, for the parts worth learning in simulation before touching hardware, its own sim-to-real story. Today that is a self-balancing robot. Next it gets legs, then a camera and the perception to use it.</p>
         <p>I chose balance and self-recovery to start on purpose. It is about the smallest robot that still forces you through the entire real-to-sim-to-real loop: an unstable system where a hand-tuned controller runs out of road and a learned policy has something to prove — and a build you can finish on a desk. Everything after this is the same loop with more degrees of freedom.</p>
         <p>The longer arc is an outdoor companion — the robot-dog idea on two wheels, smarter, and open to whatever task I can imagine giving it. <strong>Zingu Brain</strong>, the perception and decision side, comes next.</p>
       </section>
 
       <section>
         <h2>Versions</h2>
-        <p class="lede">Each version is one robot, one new capability, and one full pass down the build path.</p>
+        <p class="lede">Each version is one robot, one new capability, and every file needed to build it.</p>
 
         <div class="vblock">
           <div class="vhead">
@@ -329,7 +336,7 @@
             <li><strong>Larger spoked wheels.</strong> More ground clearance and a longer contact arc to catch a fall with.</li>
             <li><strong>Redesigned chassis.</strong> Electronics move into an enclosed box instead of riding exposed on the top plate.</li>
           </ul>
-          <p>The point is not the mechanism for its own sake: more degrees of freedom is exactly where a hand-tuned PID stops being enough and a learned policy starts to earn its keep. The build path was laid out for this.</p>
+          <p>The point is not the mechanism for its own sake: more degrees of freedom is exactly where a hand-tuned PID stops being enough and a learned policy starts to earn its keep.</p>
 
           <h4>Control loop</h4>
           <div class="diagram">        IDLE &#9472;&#9472;arm&#9472;&#9472;&gt; RECOVERING &#9472;&#9472;in envelope&#9472;&#9472;&gt; BALANCING
@@ -355,7 +362,6 @@
         <h2>Links</h2>
         <div class="links">
           <a href="https://github.com/HoangTrieuVy/Zingu">Source on GitHub &rarr;</a>
-          <a href="https://github.com/HoangTrieuVy/Zingu#the-build-path">The build path &rarr;</a>
           <a href="https://github.com/HoangTrieuVy/Zingu/blob/main/docs/hardware.md">Hardware &amp; BOM &rarr;</a>
         </div>
       </section>
