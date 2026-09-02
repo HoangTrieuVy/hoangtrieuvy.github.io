@@ -228,28 +228,6 @@ html.dark .tl-logo {
 }
 
 /* ── Upcoming Projects ── */
-.projects {
-  margin: 10px 0 0 0;
-}
-
-.project-entry {
-  margin-top: 14px;
-}
-
-.project-name {
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-.project-entry p {
-  margin: 3px 0 0 0;
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 1.6;
-}
-
 /* ── Theme toggle ── */
 .theme-toggle {
   position: fixed;
@@ -299,6 +277,20 @@ html.dark .theme-toggle img {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.thumb-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border, #d8d8d8);
+  border-radius: 4px;
+  font-family: 'CMS', 'CMU Serif', Georgia, Times, serif;
+  font-size: 13px;
+  color: var(--text-muted, #8a8a8a);
+  background: transparent;
 }
 
 .two {
