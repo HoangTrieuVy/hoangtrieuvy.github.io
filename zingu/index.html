@@ -248,6 +248,52 @@
       }
       .links a:hover { border-color: var(--text); }
 
+      /* ── Next version ── */
+      .next {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 32px;
+        align-items: start;
+      }
+
+      .next .render {
+        margin: 0;
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .next .render img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .next .copy p:first-child { margin-top: 0; }
+
+      .changes { margin: 18px 0 0 0; padding: 0; list-style: none; }
+
+      .changes li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: var(--muted);
+      }
+
+      .changes li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .changes li strong { color: var(--text); font-weight: 600; }
+
       /* ── Safety note ── */
       .note {
         margin-top: 22px;
@@ -274,6 +320,7 @@
         .stage { grid-template-columns: 4px 1fr; gap: 14px; }
         section { padding-top: 46px; }
         .diagram { font-size: 11px; }
+        .next { grid-template-columns: 1fr; gap: 22px; }
       }
     </style>
   </head>
@@ -301,6 +348,26 @@
         <p>Zingu is an inverted-pendulum robot built around an <strong>ESP32</strong>. It holds itself upright with a cascaded PID controller, and when it falls over — because it always eventually does — it detects the fall, waits for the chassis to settle, and performs a <strong>wheel-torque kick-up</strong> to swing itself back into the balance envelope.</p>
         <p>Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <strong>build path</strong>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
         <p>The longer arc is an outdoor companion — the robot-dog idea on two wheels, smarter, and open to whatever task I can imagine giving it. <strong>Zingu Brain</strong>, the perception and decision side, comes next.</p>
+      </section>
+
+      <section>
+        <h2>Coming &mdash; v0.1.6</h2>
+        <p class="lede">Legs, not just wheels.</p>
+        <div class="next">
+          <figure class="render">
+            <img src="images/zingu-0.1.6-cad.jpg" alt="CAD assembly of Zingu v0.1.6: a boxed chassis carried on two articulated leg linkages, each ending in a large spoked wheel">
+            <figcaption style="padding: 0 14px 14px 14px; margin-top: 8px;">Work in progress &mdash; CAD assembly, not yet fabricated.</figcaption>
+          </figure>
+          <div class="copy">
+            <p>The v0.1.0 machine in the video is a rigid chassis bolted straight to two wheels — the shortest path to a balancing robot. v0.1.6 puts a leg between the chassis and each wheel.</p>
+            <ul class="changes">
+              <li><strong>Articulated legs.</strong> A linkage on each side lets the body change height and ride over ground the rigid chassis simply scrapes across.</li>
+              <li><strong>Larger spoked wheels.</strong> More ground clearance and a longer contact arc to catch a fall with.</li>
+              <li><strong>Redesigned chassis.</strong> Electronics move into an enclosed box instead of riding exposed on the top plate.</li>
+            </ul>
+            <p>The point is not the mechanism for its own sake: more degrees of freedom is exactly where a hand-tuned PID stops being enough and a learned policy starts to earn its keep. The build path was laid out for this.</p>
+          </div>
+        </div>
       </section>
 
       <section>
