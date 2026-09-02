@@ -248,6 +248,58 @@
       }
       .links a:hover { border-color: var(--text); }
 
+      /* ── Versions ── */
+      .versions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+
+      .version {
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px 20px 20px 20px;
+      }
+
+      .vhead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .vnum {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        color: var(--text);
+      }
+
+      .vstate {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        background: var(--bg);
+        white-space: nowrap;
+      }
+      .vstate.done    { border-color: var(--s8); color: var(--s8); }
+      .vstate.wip     { border-color: var(--s5); color: var(--s5); }
+      .vstate.planned { border-color: var(--rule); color: var(--muted); }
+
+      .version h3 {
+        margin: 0 0 4px 0;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .version p { margin: 0; font-size: 15px; }
+
       /* ── Next version ── */
       .next {
         display: grid;
@@ -346,8 +398,32 @@
         <h2>The idea</h2>
         <p class="lede">A robot should ship as a simulatable, identified asset — not as a pile of parts and a binary.</p>
         <p>Zingu is an inverted-pendulum robot built around an <strong>ESP32</strong>. It holds itself upright with a cascaded PID controller, and when it falls over — because it always eventually does — it detects the fall, waits for the chassis to settle, and performs a <strong>wheel-torque kick-up</strong> to swing itself back into the balance envelope.</p>
-        <p>Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <strong>build path</strong>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
+        <p>I want this to be a project a beginner can actually start from, and finish. Most robot repositories hand you the firmware and leave the other 90% as an exercise. This one is organised as a <strong>build path</strong>: eight numbered stages that take you from a blank CAD document to a trained policy on hardware, with the simulation model calibrated against the real machine rather than assumed.</p>
+        <p>The project then grows <strong>one robot version at a time</strong>. Each version is a full trip around those eight stages — its own key feature, and its own sim-to-real story for the parts worth learning in simulation first. Today that is a self-balancing robot. Next it gets legs, then a camera and the perception to use it.</p>
+        <p>I chose balance and self-recovery to start on purpose. It is about the smallest robot that still forces you through the entire real-to-sim-to-real loop: an unstable system where a hand-tuned controller runs out of road and a learned policy has something to prove — and a build you can finish on a desk. Everything after this is the same loop with more degrees of freedom.</p>
         <p>The longer arc is an outdoor companion — the robot-dog idea on two wheels, smarter, and open to whatever task I can imagine giving it. <strong>Zingu Brain</strong>, the perception and decision side, comes next.</p>
+      </section>
+
+      <section>
+        <h2>Versions</h2>
+        <p class="lede">Each version is one robot, one new capability, and one full pass down the build path.</p>
+        <div class="versions">
+          <div class="version">
+            <div class="vhead"><span class="vnum">v0.1.0</span><span class="vstate done">Running</span></div>
+            <h3>Balance &amp; self-recovery</h3>
+            <p>Rigid chassis, two wheels, cascaded PID. Falls over and kicks itself back up.</p>
+          </div>
+          <div class="version">
+            <div class="vhead"><span class="vnum">v0.1.6</span><span class="vstate wip">In CAD</span></div>
+            <h3>Legs</h3>
+            <p>Articulated linkages between chassis and wheels. More degrees of freedom than a PID wants to handle.</p>
+          </div>
+          <div class="version">
+            <div class="vhead"><span class="vnum">Next</span><span class="vstate planned">Planned</span></div>
+            <h3>Perception &mdash; Zingu Brain</h3>
+            <p>A camera, and the decision side that uses it. Where the robot stops reacting and starts choosing.</p>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -382,7 +458,7 @@
 
       <section>
         <h2>The build path</h2>
-        <p class="lede">Eight stages, each producing an artefact the next one depends on.</p>
+        <p class="lede">Eight stages, each producing an artefact the next one depends on. You run the whole path once per robot version.</p>
         <div class="stages">
           <div class="stage" style="--stage-color: var(--s1)">
             <div class="bar"></div>
