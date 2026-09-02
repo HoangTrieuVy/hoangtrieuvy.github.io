@@ -125,6 +125,15 @@
         color: var(--muted);
       }
 
+      .eyebrow {
+        margin-bottom: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
       /* ── Sections ── */
       section { padding-top: 60px; }
 
@@ -335,9 +344,10 @@
       </div>
 
       <figure id="v010">
+        <div class="eyebrow">Preview &mdash; v0.1.0</div>
         <video class="shot" src="video/zingu-0.1.0.mp4" poster="images/zingu-poster.jpg"
                controls autoplay muted loop playsinline preload="metadata"></video>
-        <figcaption>Zingu v0.1.0 balancing and driving on hardware — ESP32, cascaded PID, no external support.</figcaption>
+        <figcaption>Balancing and driving on hardware &mdash; ESP32, cascaded PID, no external support.</figcaption>
       </figure>
 
       <section>
@@ -360,8 +370,8 @@
             <p>Rigid chassis, two wheels, cascaded PID. Falls over and kicks itself back up.</p>
             <span class="vmore">Watch it run &rarr;</span>
           </a>
-          <a class="version" href="#v016">
-            <div class="vhead"><span class="vnum">v0.1.6</span><span class="vstate wip">In CAD</span></div>
+          <a class="version" href="#v020">
+            <div class="vhead"><span class="vnum">v0.2.0</span><span class="vstate wip">In CAD</span></div>
             <h3>Legs</h3>
             <p>Articulated linkages between chassis and wheels. More degrees of freedom than a PID wants to handle.</p>
             <span class="vmore">See the design &rarr;</span>
@@ -375,16 +385,16 @@
         </div>
       </section>
 
-      <section id="v016">
-        <h2>Coming &mdash; v0.1.6</h2>
+      <section id="v020">
+        <h2>Coming &mdash; v0.2.0</h2>
         <p class="lede">Legs, not just wheels.</p>
         <div class="next">
           <figure class="render">
-            <img src="images/zingu-0.1.6-cad.jpg" alt="CAD assembly of Zingu v0.1.6: a boxed chassis carried on two articulated leg linkages, each ending in a large spoked wheel">
+            <img src="images/zingu-0.2.0-cad.jpg" alt="CAD assembly of Zingu v0.2.0: a boxed chassis carried on two articulated leg linkages, each ending in a large spoked wheel">
             <figcaption style="padding: 0 14px 14px 14px; margin-top: 8px;">Work in progress &mdash; CAD assembly, not yet fabricated.</figcaption>
           </figure>
           <div class="copy">
-            <p>The v0.1.0 machine in the video is a rigid chassis bolted straight to two wheels — the shortest path to a balancing robot. v0.1.6 puts a leg between the chassis and each wheel.</p>
+            <p>The v0.1.0 machine in the video is a rigid chassis bolted straight to two wheels — the shortest path to a balancing robot. v0.2.0 puts a leg between the chassis and each wheel.</p>
             <ul class="changes">
               <li><strong>Articulated legs.</strong> A linkage on each side lets the body change height and ride over ground the rigid chassis simply scrapes across.</li>
               <li><strong>Larger spoked wheels.</strong> More ground clearance and a longer contact arc to catch a fall with.</li>
