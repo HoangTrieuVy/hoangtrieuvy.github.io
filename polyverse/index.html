@@ -6,7 +6,21 @@
     <meta name="author" content="Hoang Trieu Vy LE">
     <meta name="description" content="Polyverse is a low-poly 3D real-time strategy game where time has shattered into crystal shards — each shard is one frozen age of civilization.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
 
     <meta property="og:title" content="Polyverse — a low-poly 3D strategy game">
     <meta property="og:description" content="Time has shattered into crystal shards. Each shard is one frozen age of civilization.">
@@ -14,20 +28,43 @@
     <meta property="og:type" content="website">
 
     <style>
+      /* Same tokens as ../stylesheet.css */
       :root {
-        --bg:        #ffffff;
-        --bg-raised: #fafafa;
-        --border:    #e4e4e4;
-        --text:      #171717;
-        --muted:     #5f5f5f;
-        --rule:      #cfcfcf;
+        --bg:        #fcfcfa;
+        --bg-raised: #f1f0ec;
+        --border:    #e4e4e2;
+        --text:      #0e0e0e;
+        --muted:     #484745;
+        --rule:      #7e7c76;
+        --link:      #1f4487;
+        --link-hover:#0e0e0e;
 
-        /* greyscale ramp — earliest era lightest, latest darkest */
+        --sans:  'Styrene B', 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        --serif: 'Copernicus', 'Tiempos Text', 'Newsreader', Georgia, serif;
+
+        /* greyscale ramp — earliest era faintest, latest strongest */
         --dawn:   #d4d4d4;
         --bronze: #b0b0b0;
         --iron:   #8a8a8a;
         --gear:   #5c5c5c;
         --void:   #2b2b2b;
+      }
+
+      html.dark {
+        --bg:        #151515;
+        --bg-raised: #1d1d1d;
+        --border:    #2C2C2C;
+        --text:      #EEEDE9;
+        --muted:     #BBBAAF;
+        --rule:      #7E7C76;
+        --link:      #679BE5;
+        --link-hover:#EEEDE9;
+
+        --dawn:   #3a3a3a;
+        --bronze: #5c5c5c;
+        --iron:   #8a8a8a;
+        --gear:   #b0b0b0;
+        --void:   #e0e0e0;
       }
 
       * { box-sizing: border-box; }
@@ -37,19 +74,19 @@
         padding: 0;
         background: var(--bg);
         color: var(--text);
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-size: 17px;
-        line-height: 1.65;
+        font-family: var(--sans);
+        font-size: 18px;
+        line-height: 1.46;
         -webkit-font-smoothing: antialiased;
       }
 
       a {
-        color: var(--text);
+        color: var(--link);
         text-decoration: underline;
-        text-decoration-color: var(--rule);
-        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
       }
-      a:hover { text-decoration-color: var(--text); }
+      a:hover, a:focus { color: var(--link-hover); }
 
       .wrap {
         max-width: 860px;
@@ -61,11 +98,31 @@
       .backlink {
         display: inline-block;
         margin: 28px 0 0 0;
-        font-size: 14px;
+        font-size: 15px;
         color: var(--muted);
-        letter-spacing: 0.02em;
+        text-decoration: none;
       }
-      .backlink:hover { color: var(--text); text-decoration-color: var(--text); }
+      .backlink:hover { color: var(--link-hover); }
+
+      /* ── Theme toggle (matches the home page) ── */
+      .theme-toggle {
+        position: fixed;
+        top: 16px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 100;
+      }
+      .theme-toggle:hover { background: var(--border); }
+      .theme-toggle img { display: block; }
+      html.dark .theme-toggle img { filter: invert(1); }
 
       /* ── Hero ── */
       .hero { padding: 40px 0 8px 0; }
@@ -84,10 +141,10 @@
 
       h1 {
         margin: 0;
-        font-size: clamp(44px, 9vw, 76px);
-        line-height: 1;
-        font-weight: 800;
-        letter-spacing: -0.035em;
+        font-size: clamp(42px, 9vw, 72px);
+        line-height: 1.05;
+        font-weight: 500;
+        letter-spacing: -0.01em;
         color: var(--text);
       }
 
@@ -125,12 +182,13 @@
       section { padding-top: 60px; }
 
       h2 {
-        margin: 0 0 6px 0;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
+        margin: 0 0 10px 0;
+        font-family: var(--serif);
+        font-size: 28px;
+        line-height: 1.3;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--text);
       }
 
       .lede {
@@ -234,6 +292,15 @@
   </head>
 
   <body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <img src="../dark-theme.svg" width="20" height="20" alt="">
+    </button>
+    <script>
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        var isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
     <div class="wrap">
       <a class="backlink" href="../">&larr;&nbsp; Hoang Trieu Vy LE</a>
 
