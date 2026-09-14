@@ -331,6 +331,27 @@ html.dark .theme-toggle img {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+/* BibTeX drop-downs under publications */
+.bibtex {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.bibtex pre {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-body);
+  /* Wrap long entries: unwrapped lines widen the table and crush the thumbnails. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 span.highlight {
   background-color: var(--highlight);
 }

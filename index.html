@@ -285,6 +285,7 @@
       <em>EUSIPCO 2025</em>
       <br>
       [<a href="https://hal.science/hal-05404060v1/file/2025_unfolding_Mumford_Shah_HAL.pdf">PDF</a>]
+      [<a href="https://github.com/HoangTrieuVy/UDMS">Code</a>]
     </td>
   </tr>
 
@@ -395,10 +396,10 @@
         <br>
         <em>IEEE Transactions on Image Processing</em>, 2024
         <br>
-        <a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">code </a>/
-        [<a href="https://arxiv.org/pdf/2308.03139">PDF</a>]/
-        <a href="#" onclick="toggleBibtex(event)" style="margin-left: 1px; text-decoration: none; cursor: pointer;">BibTeX</a>
-    <div id="bibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+        [<a href="https://arxiv.org/pdf/2308.03139">PDF</a>]
+        [<a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">Code</a>]
+        [<a href="#" onclick="toggleBibtex(event)">BibTeX</a>]
+    <div id="bibtex" class="bibtex" style="display: none;">
 <pre>@ARTICLE{10630640,
   author={Le, Hoang Trieu Vy and Repetti, Audrey and Pustelnik, Nelly},
   journal={IEEE Transactions on Image Processing},
@@ -484,10 +485,10 @@
     <br>
     <em>IEEE Signal Processing Letters</em>, 2022
     <br>
-    <a href="https://github.com/HoangTrieuVy/P-DMS-AT">code </a>/
-    [<a href="https://hal.science/hal-03381093/file/SPL.pdf">PDF</a>]/
-    <a href="#" onclick="dmsattoggleBibtex(event)" style="margin-left: 1px; text-decoration: none; cursor: pointer;">BibTeX</a>
-    <div id="dmsatbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+    [<a href="https://hal.science/hal-03381093/file/SPL.pdf">PDF</a>]
+    [<a href="https://github.com/HoangTrieuVy/P-DMS-AT">Code</a>]
+    [<a href="#" onclick="dmsattoggleBibtex(event)">BibTeX</a>]
+    <div id="dmsatbibtex" class="bibtex" style="display: none;">
 <pre>@ARTICLE{9723590,
   author={Le, Hoang Trieu Vy and Foare, Marion and Pustelnik, Nelly},
   journal={IEEE Signal Processing Letters},
@@ -552,10 +553,10 @@
     <br>
     <em>EUSIPCO 2022</em>
     <br>
-    <a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">code </a>/
-    [<a href="https://hal.science/hal-03621538v1/file/EUSIPCO_2022_final.pdf">PDF</a>]/
-    <a href="#" onclick="fasterpnnbibtextoggleBibtex(event)" style="margin-left: 1px; text-decoration: none; cursor: pointer;">BibTeX</a>
-    <div id="fasterpnnbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+    [<a href="https://hal.science/hal-03621538v1/file/EUSIPCO_2022_final.pdf">PDF</a>]
+    [<a href="https://github.com/HoangTrieuVy/Deep-Unfolding-Networks-for-Image-Denoising">Code</a>]
+    [<a href="#" onclick="fasterpnnbibtextoggleBibtex(event)">BibTeX</a>]
+    <div id="fasterpnnbibtex" class="bibtex" style="display: none;">
 <pre>@INPROCEEDINGS{9909592,
   author={Le, Hoang Trieu Vy and Pustelnik, Nelly and Foare, Marion},
   booktitle={2022 30th European Signal Processing Conference (EUSIPCO)},
@@ -568,8 +569,8 @@
   </td>
 </tr>
 <script>
-  function fasterpnnbibtextoggleBibtex() {
-    event.preventDefault(event); // Prevent any default behavior like scrolling
+  function fasterpnnbibtextoggleBibtex(event) {
+    event.preventDefault(); // Prevent any default behavior like scrolling
       const bibtexDiv = document.getElementById('fasterpnnbibtex');
       if (bibtexDiv.style.display === 'none') {
           bibtexDiv.style.display = 'block';
@@ -620,11 +621,11 @@
     <br>
     <em>GRETSI 2022</em>
     <br>
-    [<a href="https://hal.science/hal-03621545v1/document">PDF</a>]/
-    <a href="#" onclick="dhsbibtextoggleBibtex(event)" style="margin-left: 1px; text-decoration: none; cursor: pointer;">BibTeX</a>
+    [<a href="https://hal.science/hal-03621545v1/document">PDF</a>]
+    [<a href="#" onclick="dhsbibtextoggleBibtex(event)">BibTeX</a>]
 
 
-    <div id="dhsbibtex" style="display: none; margin-top: 1px; background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd;">
+    <div id="dhsbibtex" class="bibtex" style="display: none;">
 <pre>@inproceedings{HoangTVL2022AlgorithmesPR,
   title={Fast Proximal Unrolled Algorithms for the Analysis of Piecewise Homogeneous Fractal Images},
   author={ Hoang T.V Le, Barbara Pascal, Nelly Pustelnik, Marion Foare and Patrice Abry},
