@@ -8,14 +8,17 @@
 
   // Short on-canvas labels; the full wording shows on hover.
   var SHORT = {
+    'Agentic systems': 'Agentic systems',
     'Machine learning for perception': 'ML for perception',
     'Inverse problems and optimization': 'Inverse problems',
     'Applications': 'Applications',
     'Image processing and computer vision': 'Computer vision',
+    'Harnesses for agents: orchestration, tool use, memory, evaluation': 'Agent harness',
     'Multimodal LLMs': 'Multimodal LLMs',
+    'Multi-agent systems': 'Multi-agent systems',
     'World models, real2sim2real transfer, physical AI': 'World models',
     'Reinforcement learning for robot control and human modeling': 'Reinforcement learning',
-    'Generative models': 'Generative models',
+    'Generative models and flow matching': 'Generative models',
     'Non-smooth and non-convex optimization, proximal algorithms': 'Proximal algorithms',
     'Unrolled and physics-consistent deep architectures': 'Unrolled networks',
     'Mumford–Shah models, joint restoration and edge detection': 'Mumford–Shah',
@@ -27,6 +30,11 @@
 
   // Cross-links between topics in different groups.
   var BRIDGES = [
+    ['Agent harness', 'Multimodal LLMs'],
+    ['Agent harness', 'Multi-agent systems'],
+    ['Agent harness', '3D reconstruction'],
+    ['Multimodal LLMs', 'Computer vision'],
+    ['Multimodal LLMs', 'Generative models'],
     ['Computer vision', 'Mumford–Shah'],
     ['Computer vision', '3D reconstruction'],
     ['Unrolled networks', 'Tomography / CT'],
@@ -175,8 +183,8 @@
       text: s.getPropertyValue('--text').trim(),
       muted: s.getPropertyValue('--text-muted').trim(),
       border: s.getPropertyValue('--border').trim(),
-      // Sapphire, Ballet Slipper, Pistachio (Sage on the dark ground)
-      groups: dark ? ['#72B0AB', '#FE9179', '#CFB97E'] : ['#72B0AB', '#FE9179', '#B89D47']
+      // Heather, Sapphire, Ballet Slipper, Pistachio (Sage on the dark ground)
+      groups: dark ? ['#A98FD1', '#72B0AB', '#FE9179', '#CFB97E'] : ['#8C6FBF', '#72B0AB', '#FE9179', '#B89D47']
     };
   }
 
