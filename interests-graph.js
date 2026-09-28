@@ -249,7 +249,7 @@
       ctx.fill();
       if (!n.hub) ctx.stroke();
 
-      ctx.font = (n.hub ? '600 13px ' : '400 12px ') + "'Styrene B', 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif";
+      ctx.font = (n.hub ? '700 15px ' : '500 13px ') + "'Styrene B', 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif";
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
       n.halfW = ctx.measureText(n.label).width / 2;
