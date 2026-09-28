@@ -58,7 +58,7 @@ td,
 th,
 tr,
 p {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.5;
@@ -67,7 +67,7 @@ p {
 }
 
 strong {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: inherit;
   font-weight: 700;
   color: var(--text);
@@ -77,7 +77,7 @@ h2 {
   margin: 0 0 8px 0;
   padding-top: 44px;
   font-weight: 700;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 36px;
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -85,7 +85,7 @@ h2 {
 }
 
 .papertitle {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -95,7 +95,7 @@ h2 {
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 56px;
   line-height: 1.1;
   font-weight: 700;
@@ -303,7 +303,7 @@ html.dark .theme-toggle img {
   justify-content: center;
   border: 1px dashed var(--border, #d8d8d8);
   border-radius: 4px;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 13px;
   color: var(--text-muted, #8a8a8a);
   background: transparent;
