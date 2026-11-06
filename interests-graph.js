@@ -23,20 +23,21 @@
     'Unrolled and physics-consistent deep architectures': 'Unrolled networks',
     'Mumford–Shah models, joint restoration and edge detection': 'Mumford–Shah',
     'Robotics and embodied agents': 'Robotics',
-    'Computer-aided design, 3D reconstruction and scene understanding': '3D reconstruction',
-    'Tomographic imaging, 3D CT reconstruction': 'Tomography / CT',
-    'Large-scale physics-experiment and scientific imaging': 'Scientific imaging'
+    'Video understanding': 'Video understanding',
+    '3D/4D scene understanding': '3D/4D scenes',
+    'Computer-aided design and 3D/4D reconstruction': '3D/4D reconstruction',
+    'Tomographic imaging, 3D CT reconstruction': 'Tomography / CT'
   };
 
   // Cross-links between topics in different groups.
   var BRIDGES = [
     ['Agent harness', 'Multimodal LLMs'],
     ['Agent harness', 'Multi-agent systems'],
-    ['Agent harness', '3D reconstruction'],
+    ['Agent harness', '3D/4D reconstruction'],
     ['Multimodal LLMs', 'Computer vision'],
     ['Multimodal LLMs', 'Generative models'],
     ['Computer vision', 'Mumford–Shah'],
-    ['Computer vision', '3D reconstruction'],
+    ['Computer vision', '3D/4D reconstruction'],
     ['Unrolled networks', 'Tomography / CT'],
     ['Proximal algorithms', 'Tomography / CT'],
     ['Unrolled networks', 'Generative models'],
@@ -46,9 +47,13 @@
     ['Multi-agent systems', 'Multimodal LLMs'],
     ['Multi-agent systems', 'Reinforcement learning'],
     ['Multi-agent systems', 'Robotics'],
-    ['Generative models', '3D reconstruction'],
-    ['Tomography / CT', 'Scientific imaging'],
-    ['Mumford–Shah', 'Proximal algorithms']
+    ['Generative models', '3D/4D reconstruction'],
+    ['Mumford–Shah', 'Proximal algorithms'],
+    ['Video understanding', 'Computer vision'],
+    ['Video understanding', 'Multimodal LLMs'],
+    ['Video understanding', '3D/4D scenes'],
+    ['3D/4D scenes', '3D/4D reconstruction'],
+    ['3D/4D scenes', 'World models']
   ];
 
   var nodes = [], edges = [], byLabel = {};
@@ -249,7 +254,7 @@
       ctx.fill();
       if (!n.hub) ctx.stroke();
 
-      ctx.font = (n.hub ? '700 15px ' : '500 13px ') + "'Copernicus', 'Tiempos Text', 'Newsreader', Georgia, serif";
+      ctx.font = (n.hub ? '700 14px ' : '500 12px ') + "'Copernicus', 'Tiempos Text', 'Newsreader', Georgia, serif";
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
       n.halfW = ctx.measureText(n.label).width / 2;

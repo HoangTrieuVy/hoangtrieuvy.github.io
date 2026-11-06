@@ -59,7 +59,7 @@ th,
 tr,
 p {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--text-body);
@@ -78,7 +78,7 @@ h2 {
   padding-top: 44px;
   font-weight: 700;
   font-family: var(--serif);
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.15;
   letter-spacing: -0.025em;
   color: var(--text);
@@ -86,7 +86,7 @@ h2 {
 
 .papertitle {
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--text);
@@ -96,7 +96,7 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: var(--serif);
-  font-size: 56px;
+  font-size: 50px;
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -113,7 +113,7 @@ h2 {
 }
 
 .tl-year {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text-muted);
   margin: 0 0 6px 0;
@@ -152,14 +152,14 @@ html.dark .tl-logo {
 
 .tl-body {
   flex: 1;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--text-body);
 }
 
 .tl-body p {
   margin: 0 0 4px 0;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--text-body);
 }
 
@@ -259,7 +259,7 @@ html.dark .tl-logo {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   transition: background 0.2s ease, border-color 0.2s ease;
   z-index: 100;
   line-height: 1;
