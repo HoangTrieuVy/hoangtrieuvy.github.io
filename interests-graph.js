@@ -24,8 +24,8 @@
     'Mumford–Shah models, joint restoration and edge detection': 'Mumford–Shah',
     'Robotics and embodied agents': 'Robotics',
     'Video understanding': 'Video understanding',
-    '3D/4D scene understanding': '3D/4D scenes',
-    'Computer-aided design and 3D/4D reconstruction': '3D/4D reconstruction',
+    '3D/4D scene understanding': '3D/4D scene understanding',
+    'Computer-aided design and 3D/4D scene understanding': 'CAD & 3D/4D scenes',
     'Tomographic imaging, 3D CT reconstruction': 'Tomography / CT'
   };
 
@@ -33,11 +33,11 @@
   var BRIDGES = [
     ['Agent harness', 'Multimodal LLMs'],
     ['Agent harness', 'Multi-agent systems'],
-    ['Agent harness', '3D/4D reconstruction'],
+    ['Agent harness', 'CAD & 3D/4D scenes'],
     ['Multimodal LLMs', 'Computer vision'],
     ['Multimodal LLMs', 'Generative models'],
     ['Computer vision', 'Mumford–Shah'],
-    ['Computer vision', '3D/4D reconstruction'],
+    ['Computer vision', 'CAD & 3D/4D scenes'],
     ['Unrolled networks', 'Tomography / CT'],
     ['Proximal algorithms', 'Tomography / CT'],
     ['Unrolled networks', 'Generative models'],
@@ -47,13 +47,13 @@
     ['Multi-agent systems', 'Multimodal LLMs'],
     ['Multi-agent systems', 'Reinforcement learning'],
     ['Multi-agent systems', 'Robotics'],
-    ['Generative models', '3D/4D reconstruction'],
+    ['Generative models', 'CAD & 3D/4D scenes'],
     ['Mumford–Shah', 'Proximal algorithms'],
     ['Video understanding', 'Computer vision'],
     ['Video understanding', 'Multimodal LLMs'],
-    ['Video understanding', '3D/4D scenes'],
-    ['3D/4D scenes', '3D/4D reconstruction'],
-    ['3D/4D scenes', 'World models']
+    ['Video understanding', '3D/4D scene understanding'],
+    ['3D/4D scene understanding', 'CAD & 3D/4D scenes'],
+    ['3D/4D scene understanding', 'World models']
   ];
 
   var nodes = [], edges = [], byLabel = {};
