@@ -146,7 +146,6 @@ h2 {
 
 html.dark .tl-logo {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 4px;
   padding: 4px;
 }
 
@@ -288,6 +287,14 @@ html.dark .theme-toggle img {
   display: block;
 }
 
+/* Rounded corners on every content image: logos, profile photo, thumbnails. */
+.tl-logo,
+.hoverZoomLink,
+.one img,
+.thumb-placeholder {
+  border-radius: 8px;
+}
+
 .one img {
   width: 100%;
   height: auto;
@@ -302,7 +309,6 @@ html.dark .theme-toggle img {
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--border, #d8d8d8);
-  border-radius: 4px;
   font-family: var(--serif);
   font-size: 13px;
   color: var(--text-muted, #8a8a8a);
