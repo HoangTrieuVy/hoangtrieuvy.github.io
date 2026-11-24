@@ -292,7 +292,7 @@ html.dark .theme-toggle img {
 .hoverZoomLink,
 .one img,
 .thumb-placeholder {
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .one img {
